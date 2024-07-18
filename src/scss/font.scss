@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
+.header {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1vw;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .font-btn {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1vw;
+        font-weight: 700;
+        font-style: normal;
+
+        @media (max-width: 1024px) {
+            font-size: 2vw;
+        }
+    }
+}
+
+
+  
+  .footer {
+    .font-title {
+      font-family: "Signika Negative", sans-serif;
+      font-size: 1.2vw;
+      line-height: 1.2vw;
+      font-weight: 700;
+      color: #fff;
+    }
+  
+    .font-content {
+      font-family: "Signika Negative", sans-serif;
+      font-size: 0.9vw;
+      line-height: 1.2vw;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+  
+
+.home {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 2vw;
+        line-height: 2.5vw;
+        font-weight: 700;
+        color: #fff;
+    }
+
+}
+
+.trust {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.2vw;
+        font-weight: 700;
+    }
+
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.9vw;
+        line-height: 1.2vw;
+        font-weight: 400;
+    }
+}
+
+
+.booking {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.2vw;
+        font-weight: 700;
+    }
+
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.9vw;
+        line-height: 1.2vw;
+        font-weight: 400;
+    }
+}

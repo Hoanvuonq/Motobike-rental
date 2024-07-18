@@ -1,0 +1,221 @@
+.all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scale-icon {
+    transition: transform 1s ease;
+    cursor: pointer;
+    &:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+.hover-items {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    &:active {
+        box-shadow: none;
+        transform: translateY(5px);
+    }
+    &:hover {
+        box-shadow: none;
+        transform: translateY(5px);
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+.menu {
+    z-index: 100000;
+    position: fixed;
+    top: 10vw;
+    left: 0;
+    width: 300px;
+    background-color: white;
+    box-shadow: -12px 0 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.menu-hidden {
+    transition: transform 0.5s ease-out;
+    transform: translateX(-120%);
+}
+
+.menu-visible {
+    transition: transform 0.5s ease-out;
+    transform: translateX(0);
+}
+
+@keyframes socialFill {
+    0% {-webkit-transform: rotate(0) scale(1) skew(1deg);  }
+    10% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}
+    20% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}
+    30% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}
+    40% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}
+    50% {-webkit-transform: rotate(0) scale(1) skew(1deg);}
+    100% {-webkit-transform: rotate(0) scale(1) skew(1deg);}
+}
+
+
+.fillColorZalo {
+    box-shadow: 0 0 0 0 #2196F3;
+    background-color: rgba(33, 150, 243, 0.7);
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 100%;
+}
+
+.fillColorPhone {
+    box-shadow: 0 0 0 0 #6fd626;
+    background-color: rgba(75, 243, 33, 0.7);
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 100%;
+}
+.shadow-custom1 {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.rings {
+    animation: socialFill 1.5s infinite ease-in-out;
+}
+
+.zoom {
+    animation: zoom 1.3s infinite;
+    transition: all .5s;
+}
+@keyframes zoom{
+    0%{transform:scale(.9)}
+    70%{transform:scale(1);box-shadow:0 0 0 15px transparent}
+    100%{transform:scale(.9);box-shadow:0 0 0 0 transparent}
+}
+
+
+.language-switch {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    background-color: #c0c5c9;
+    width: 3.5vw;
+    height: 2vw;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2vw;
+    height: 2vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    transform: scale(0.8);
+    transition: all 0.7s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-image: url('../assets/logo/vietnnamese.png');
+    background-size: cover;
+    background-position: center;
+}
+
+input[type="checkbox"]:checked::before {
+    background-image: url('../assets/logo/united-kingdom.png');
+    left: 1.5vw;
+}
+
+.title {
+    &::before {
+        position: absolute;
+        content: '';
+        background: #62fff0;
+        height: 0.3vw;
+        width: 6vw;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.bg-contact {
+    background: url(../assets/img/bg_footer_contact.png) no-repeat;
+    background-size: initial;
+    background-position: left center;
+}
+
+
+.hover-line {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #62fff0;
+      transition: width 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+      animation: borderExpand 0.5s forwards;
+    }
+  }
+
+
+@keyframes borderExpand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+.bg-banner {
+    background-image: url(../assets/img/banner.jpg);
+    background-size: cover;
+    background-origin: content-box;
+    background-position: 50% 0%;
+    background-repeat: repeat;
+}
+
+.bg-overLay {
+    position: absolute;
+    color: #fff;
+    padding: 8px 16px;
+    overflow: hidden;
+    inset: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+         background: transparent; 
+    }
+}
