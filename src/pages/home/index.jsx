@@ -1,9 +1,12 @@
 import React from 'react';
-import Benefit from '../../components/benefit';
-import Booking from '../../components/booking';
+import Benefit from '../../partials/benefit';
+import Booking from '../../partials/booking';
 import Carousel from '../../components/carousel';
 import Banner from '../../components/banner';
-import OptionMotobike from '../../components/optionMotobike';
+import OptionMotobike from '../../partials/optionMotobike';
+import Highlights from '../../partials/highlights';
+import Introduce from '../../partials/introduce';
+import Category from '../../partials/category';
 
 const Home = () => {
     return (
@@ -12,6 +15,9 @@ const Home = () => {
             <Benefit />
             <OptionMotobike />
             <Booking />
+            <Highlights />
+            <Introduce />
+            <Category />
             <Carousel />
         </div>
     );

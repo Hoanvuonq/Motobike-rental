@@ -11,7 +11,7 @@ const OptionMotobike = () => {
             <div className="bg-overlay"></div>
             <div className="all-center absolute gap-[1.5vw] w-full">
                 {listOptionIMG.map(({ images }, index) => (
-                    <div key={index} className=" bg-[#f1f1f1] border-b-[0.3vw] border-mainColor  w-[16vw] h-[16vw] all-center">
+                    <div key={index} className="      w-[16vw] h-[16vw] all-center">
                         <img src={images} alt="" className='object-cover w-[16vw] ' />
                     </div>
                 ))}

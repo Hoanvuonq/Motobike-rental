@@ -125,6 +125,11 @@ input[type="checkbox"] {
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.7s ease;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 7vw;
+        height: 4vw;
+    }
 }
 
 input[type="checkbox"]::before {
@@ -142,11 +147,18 @@ input[type="checkbox"]::before {
     background-image: url('../assets/logo/vietnnamese.png');
     background-size: cover;
     background-position: center;
+    @media (max-width: 768px) {
+        width: 4vw;
+        height: 4vw;
+    }
 }
 
 input[type="checkbox"]:checked::before {
     background-image: url('../assets/logo/united-kingdom.png');
     left: 1.5vw;
+    @media (max-width: 768px) {
+        left: 3vw;
+    }
 }
 
 .title {
@@ -222,9 +234,27 @@ input[type="checkbox"]:checked::before {
     clip-path: polygon(20% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
 }
 
+.bg-highlights {
+    background-image: url(../assets/img/banner-motoaa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: repeat;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 110px 0px 160px 0px;
+    clip-path: polygon(88% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+}
+
+.bg-order {
+    background: #EEEEEE;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 140px 0px 120px 0px;
+    clip-path: polygon(20% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+}
+
 .bg-overlay {
     background-color: #000000;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     height: 100%;
     width: 100%;
@@ -250,3 +280,136 @@ input[type="checkbox"]:checked::before {
          background: transparent; 
     }
 }
+
+.btn-box {
+    background: #62fff0;
+    color: #000;
+    transition: .3s ease;
+    &:hover {
+        background: #000;
+        color: #fff;
+        transition: .3s ease;
+    }
+
+    &:hover {
+        .design-box {
+            transition: .3s ease;
+            background-color: #62fff0;
+            &::after  {
+                content: '';
+                border-color: transparent transparent transparent #000;
+                transform: rotate(180deg);
+                transition: .6s ease;
+            }
+        }
+    }
+}
+
+.design-box {
+    background-color: #222222;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    width: 1vw;
+    height: 1vw;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s ease;
+
+    @media (max-width: 768px) {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4.5px 0 4.5px 6px;
+        border-color: transparent transparent transparent #fff;
+        transition: .6s ease;
+    }
+}
+
+
+.items-category{
+    .items-products{
+      transition: all .3s;
+      .items-content{
+        overflow: hidden;
+        img{
+            transition: .6s ease;
+          }
+          &:hover{
+            img {
+              transform: scale(1.1);
+              transition: .6s ease;
+            }
+          }
+      }
+      .fl-woo-item-bottom-content{
+ 
+        .fl--woo-add-to-cart-wrap {
+        
+          .fl--order{
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+            left: 0;
+            margin-top: 40px;
+            font-size: .9rem;
+            color: #fff;
+            text-align: center;
+            transform: translateY(100%);
+            z-index: -1;
+            perspective: 600px;
+            transform-style: preserve-3d;
+ 
+            .order-now{
+              line-height: 1;
+              font-size: 12px;
+              text-transform: uppercase;
+              padding: 17px 30px;
+              border-radius: 0;
+              color: #fff;
+              transition: .3s ease;
+              width: 100%;
+              display: table;
+              transform: rotateX(-100deg);
+              transform-origin: 0 0;
+              backface-visibility: hidden;
+              &:hover{
+                transition: .3s ease;
+              }
+              &.added{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:hover{
+      z-index: 2;
+      position: relative;
+      .items-products{
+        box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.12);
+        transform: translateY(-30px);
+        transition: .3s ease;
+        .fl--woo-add-to-cart-wrap .fl--order{
+            .order-now{
+            transform: rotateX(0);
+          }
+        }
+      }
+ 
+    }
+ 
+  }
+ 
+ 
+ 

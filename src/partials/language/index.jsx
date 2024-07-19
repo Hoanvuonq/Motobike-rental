@@ -9,7 +9,7 @@ const Language = () => {
     };
 
     return (
-        <div className="language-switch">
+        <div className="language-switch all-center">
             <input
                 type="checkbox"
                 checked={isChecked}

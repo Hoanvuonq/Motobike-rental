@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import Social from '../components/social';
+import Social from '../partials/social';
 
 const MainLayout = ({ children }) => {
     return (
