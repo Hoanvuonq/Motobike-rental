@@ -29,9 +29,9 @@ const Menu = ({ isOpen, onClose }) => {
     return (
         <div>
             {isOpen && <div className='overlay' onClick={handleClose} />}
-            <div ref={menuRef} className={`menu border absolute z-[60] pb-10 px-5 border-[#e5e9f2] custom-shadow-2 rounded-2xl w-[300px] bg-white lg:hidden block ${isOpen ? "menu-visible" : "menu-hidden"}`} onClick={handleInsideClick}>
+            <div ref={menuRef} className={`menu border absolute z-[60] pb-10 px-5 border-[#e5e9f2] custom-shadow-2  bg-white lg:hidden block ${isOpen ? "menu-visible" : "menu-hidden"}`} onClick={handleInsideClick}>
                 <div className="all-center ww-full flex-col py-4">
-                    <img src={Logo} alt="Logo Header" className="scale-icon w-[5vw] h-[5vw]" />
+                    <img src={Logo} alt="Logo Header" className="scale-icon w-[20vw] h-[20vw]" />
                 </div>
                 <ul className="flex gap-4 flex-col">
                     {listMenu.map(({ title, link }, index) => (

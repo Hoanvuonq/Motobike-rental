@@ -1,5 +1,5 @@
 .all-center {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
 }
@@ -39,9 +39,10 @@
 .menu {
     z-index: 100000;
     position: fixed;
-    top: 10vw;
+    top: 0;
     left: 0;
     width: 300px;
+    height: 100vh;
     background-color: white;
     box-shadow: -12px 0 15px -3px rgba(0, 0, 0, 0.2);
 }
@@ -86,6 +87,10 @@
 }
 .shadow-custom1 {
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.shadow-custom2 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .rings {
@@ -195,13 +200,37 @@ input[type="checkbox"]:checked::before {
     }
   }
 
-
 .bg-banner {
-    background-image: url(../assets/img/banner.jpg);
+    background-image: url(../assets/img/banner-moto-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box;
-    background-position: 50% 0%;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 300px 0px 300px 0px;
+    clip-path: polygon(88% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+
+    @media (max-width: 768px) {
+        clip-path: polygon(88% 100%, 121% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+    }
+}
+.bg-option {
+    background-image: url(../assets/img/banner-motoaa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-repeat: repeat;
+    clip-path: polygon(20% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+}
+
+.bg-overlay {
+    background-color: #000000;
+    opacity: 0.6;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 .bg-overLay {
@@ -213,7 +242,9 @@ input[type="checkbox"]:checked::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 8px;
     height: 100%;
-    width: 100%;
+    width: 94.5%;
+    margin: 0 0.5vw;
+    padding: 0 0.5vw;
 
     &:hover {
          background: transparent; 

@@ -12,7 +12,9 @@ module.exports = {
         phone: "#6fd626",
         layout: "#343434",
       },
-
+      borderColor: {
+        header: "rgba(255, 255, 255, 0.25)"
+      }
     },
   },
   plugins: [],

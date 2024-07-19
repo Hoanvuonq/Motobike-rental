@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxygen:wght@300;400;700&display=swap');
 
 .header {
     .font-title {
@@ -19,6 +20,21 @@
         @media (max-width: 1024px) {
             font-size: 2vw;
         }
+    }
+
+    .phone {
+        .font-title {
+            font-family: "Oxygen", sans-serif;
+            font-size: 1.2vw;
+            line-height: 1.2vw;
+            font-weight: 100;
+        }
+        .font-content {
+            font-family: "Oswald", sans-serif;
+            font-size: 1.8vw;
+            line-height: 1.8vw;
+            font-weight: 500;
+        }  
     }
 }
 
@@ -85,4 +101,27 @@
         line-height: 1.2vw;
         font-weight: 400;
     }
+}
+
+.banner {
+    .font-slogan {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 2vw;
+        font-weight: 700;
+    }
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size:4vw;
+        line-height: 5vw;
+        font-weight: 700;
+    }
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.2vw;
+        font-weight: 400;
+    }
+
+    
 }
