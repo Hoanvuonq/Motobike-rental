@@ -4,8 +4,6 @@ import Moto3 from '../../assets/icon/moto3.png'
 import Moto4 from '../../assets/icon/moto4.png'
 import Moto5 from '../../assets/icon/moto5.png'
 
-
-
 export const listOptionIMG = [
     { images: Moto1 },
     { images: Moto2 },

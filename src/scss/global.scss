@@ -245,11 +245,11 @@ input[type="checkbox"]:checked::before {
     clip-path: polygon(88% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
 }
 
-.bg-order {
+.bg-category {
     background: #EEEEEE;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 140px 0px 120px 0px;
-    clip-path: polygon(20% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    clip-path: polygon(20% 0%, 100% 6%, 100% 100%, 0 100%, 0 5%);
 }
 
 .bg-overlay {

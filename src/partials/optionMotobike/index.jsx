@@ -10,11 +10,11 @@ const OptionMotobike = () => {
         <div className='bg-option all-center w-full h-[30vw]'>
             <div className="bg-overlay"></div>
             <div className="all-center absolute gap-[1.5vw] w-full">
-                {listOptionIMG.map(({ images }, index) => (
+                {/* {listOptionIMG.map(({ images }, index) => (
                     <div key={index} className="      w-[16vw] h-[16vw] all-center">
                         <img src={images} alt="" className='object-cover w-[16vw] ' />
                     </div>
-                ))}
+                ))} */}
             </div>
         </div>
     )

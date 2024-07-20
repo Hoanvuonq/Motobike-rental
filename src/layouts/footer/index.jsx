@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-start flex-col gap-[2vw] w-[35vw]">
+            {/* <div className="flex justify-start flex-col gap-[2vw] w-[35vw]">
                 <div className='w-[5vw] h-[6vw]'></div>
                 <div className="flex flex-col gap-[1vw]">
                     <h1 className='font-title'>GIỚI THIỆU</h1>
@@ -53,7 +53,7 @@ const Footer = () => {
                         <Facebook className="hover-items" />
                     </div>
                 </div>
-            </div >
+            </div > */}
         </div >
     )
 }
