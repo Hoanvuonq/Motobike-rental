@@ -29,7 +29,7 @@ const Booking = () => {
     return (
         <div className=" flex flex-col gap-[3vw] py-[2vw]">
             <SecTitle title='Đặt xe tại T-BIKE' />
-            <div className="booking  all-center gap-[2vw]">
+            <div className="booking all-center md:flex-row flex-col gap-[2vw]">
                 {stepMemo}
             </div>
         </div >

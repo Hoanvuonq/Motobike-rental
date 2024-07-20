@@ -345,15 +345,13 @@ input[type="checkbox"]:checked::before {
           }
           &:hover{
             img {
-              transform: scale(1.1);
+              transform: scale(1.07);
               transition: .6s ease;
             }
           }
       }
       .fl-woo-item-bottom-content{
- 
         .fl--woo-add-to-cart-wrap {
-        
           .fl--order{
             display: flex;
             position: absolute;
