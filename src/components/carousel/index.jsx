@@ -17,7 +17,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="flex flex-col gap-[3vw] py-[2vw] items-center">
+        <div className="flex flex-col gap-[3vw] py-[5vw] items-center">
             <SecTitle title='Địa điểm du lịch' />
 
             <div className="slider-container w-full">

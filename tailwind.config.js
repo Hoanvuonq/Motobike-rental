@@ -10,6 +10,7 @@ module.exports = withMT({
       },
       backgroundColor: {
         zalo: "#2196F3",
+        about: "#f8f8f8",
         phone: "#6fd626",
         layout: "#343434",
       },

@@ -1,15 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 import Logo from '../../assets/logo/t-bike_logo.png'
 
 const listMenu = [
-    { title: 'Trang chủ', link: '/' },
-    { title: 'Cho Thuê Xe Máy - Đà Nẵng', link: '#' },
-    { title: 'Cho Thuê Xe Máy - Nha Trang', link: '#' },
-    { title: 'Liên hệ', link: '#' },
-]
+    { key: 'home', link: '/' },
+    { key: 'rentalDanang', link: '/rental-danang' },
+    { key: 'rentalNhatrang', link: '/rental-nhatrang' },
+    { key: 'contact', link: '#' }
+];
 
 const Menu = ({ isOpen, onClose }) => {
+    const { t } = useTranslation();
     const menuRef = useRef();
 
     const handleClickOutside = (event) => {
@@ -19,6 +21,16 @@ const Menu = ({ isOpen, onClose }) => {
         if (isOpen) document.addEventListener("mousedown", handleClickOutside);
         return () => { document.removeEventListener("mousedown", handleClickOutside) };
     };
+
+    const listMenuMemo = useMemo(() => {
+        return listMenu.map(({ key, link }, index) => (
+            <li key={index} className="li-menu border-b-[0.1vw] p-[2vw] border-gray">
+                <Link to={link} className="text-menu-header" >
+                    {t(key)}
+                </Link>
+            </li>
+        ))
+    }, [listMenu])
 
     const handleClose = () => { onClose() }
     const handleInsideClick = (e) => { e.stopPropagation() };
@@ -33,14 +45,8 @@ const Menu = ({ isOpen, onClose }) => {
                 <div className="all-center ww-full flex-col py-4">
                     <img src={Logo} alt="Logo Header" className="scale-icon w-[20vw] h-[20vw]" />
                 </div>
-                <ul className="flex gap-4 flex-col">
-                    {listMenu.map(({ title, link }, index) => (
-                        <li key={index} className="li-menu">
-                            <Link to={link} className="text-menu-header" target="_blank">
-                                {title}
-                            </Link>
-                        </li>
-                    ))}
+                <ul className="flex gap-[6vw] flex-col">
+                    {listMenuMemo}
                 </ul>
             </div>
         </div>

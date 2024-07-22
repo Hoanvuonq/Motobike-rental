@@ -48,20 +48,53 @@
 }
 
 .footer {
+    .font-slogan {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 2vw;
+        font-weight: 700;
+        @media (max-width: 1024px) {
+            font-size: 3vw;
+            line-height: 3vw;
+        }
+        @media (max-width: 768px) {
+            font-size: 7vw;
+            line-height: 7vw;
+        }
+    }
+    .font-title-mail {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 2vw;
+        line-height: 2vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 4vw;
+        }
+    }
     .font-title {
         font-family: "Signika Negative", sans-serif;
         font-size: 1.2vw;
         line-height: 1.2vw;
         font-weight: 700;
         color: #fff;
-    }
 
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 6vw;
+        }
+      
+    }
     .font-content {
         font-family: "Signika Negative", sans-serif;
         font-size: 0.9vw;
         line-height: 1.2vw;
         font-weight: 400;
         color: #fff;
+        @media (max-width: 768px) {
+            font-size: 3.5vw;
+            line-height: 3.5vw;
+        }
     }
 }
 
@@ -71,9 +104,23 @@
         font-size: 2vw;
         line-height: 2.5vw;
         font-weight: 700;
+        text-align: center;
         color: #fff;
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 6vw;
+        }
     }
 
+}
+
+.menu {
+    .text-menu-header {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 4.5vw;
+        line-height: 6vw;
+        font-weight: 500;
+    }
 }
 
 .trust {
@@ -119,8 +166,8 @@
             line-height: 3vw;
         }
         @media (max-width: 768px) {
-            font-size: 3vw;
-            line-height: 3vw;
+            font-size: 5vw;
+            line-height: 5vw;
         }
     }
     .font-title {
@@ -129,8 +176,8 @@
         line-height: 5vw;
         font-weight: 700;
         @media (max-width: 768px) {
-            font-size: 7vw;
-            line-height: 7vw;
+            font-size: 8vw;
+            line-height: 10vw;
         }
     }
     .font-content {
@@ -138,9 +185,10 @@
         font-size: 1.2vw;
         line-height: 1.2vw;
         font-weight: 400;
+        text-align: center;
         @media (max-width: 768px) {
-            font-size: 3vw;
-            line-height: 3vw;
+            font-size: 4vw;
+            line-height: 6vw;
         }
     }   
 }
@@ -153,8 +201,8 @@
         font-weight: 700;
 
         @media (max-width: 768px) {
-            font-size: 3vw;
-            line-height: 3vw;
+            font-size: 4.5vw;
+            line-height: 5.5vw;
         }
     }
 
@@ -167,36 +215,51 @@
         font-size: 2vw;
         line-height: 2vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 8vw;
+            line-height: 12vw;
+        }
     }
     .font-title {
         font-family: "Signika Negative", sans-serif;
         font-size: 2.5vw;
         line-height: 3vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 8vw;
+        }
     }
     .font-content {
         font-family: "Signika Negative", sans-serif;
         font-size: 1vw;
         line-height: 1.6vw;
         font-weight: 100;
+        @media (max-width: 768px) {
+            font-size: 4.5vw;
+            line-height: 7.5vw;
+        }
     }   
     .font-titlelist {
         font-family: "Signika Negative", sans-serif;
         font-size: 1.1vw;
         line-height: 1.8vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 5vw;
+            line-height: 7vw;
+        }
     }  
     .font-contentList {
         font-family: "Signika Negative", sans-serif;
         font-size: 0.9vw;
         line-height: 1.5vw;
         font-weight: 100;
-    }   
-    .font-contentControduce {
-        font-family: "Signika Negative", sans-serif;
-        font-size: 0.8vw;
-        line-height: 1.5vw;
-        font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6.5vw;
+        }
     }   
 }
 
@@ -204,13 +267,108 @@
     .font-topic {
         font-family: "Signika Negative", sans-serif;
         font-size: 1vw;
-        line-height: 1.2    vw;
+        line-height: 1.2vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6.5vw;
+        }
     }
     .font-content {
         font-family: "Signika Negative", sans-serif;
         font-size: 1vw;
         line-height: 1.6vw;
         font-weight: 100;
+    }   
+}
+
+.about {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 3vw;
+        font-weight: 700;
+
+        @media (max-width: 768px) {
+            font-size: 4.5vw;
+            line-height: 5.5vw;
+        }
+    }
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.8vw;
+        line-height: 1.6vw;
+        font-weight: 100;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 3vw;
+            line-height: 5vw;
+        }
+    }   
+}
+
+.introduce {
+    .font-slogan {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 2vw;
+        line-height: 2vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 7vw;
+            line-height: 12vw;
+        }
+    }
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 2.5vw;
+        line-height: 3vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 9vw;
+        }
+    }
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1.6vw;
+        font-weight: 100;
+        @media (max-width: 768px) {
+            font-size: 4.5vw;
+            line-height: 7.5vw;
+        }
+    }   
+    .font-titlelist {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.1vw;
+        line-height: 1.8vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 5vw;
+            line-height: 7vw;
+        }
+    }  
+    .font-contentList {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.9vw;
+        line-height: 1.5vw;
+        font-weight: 100;
+
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6.5vw;
+        }
+    }   
+    .font-contentControduce {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.8vw;
+        line-height: 1.5vw;
+        font-weight: 600;
+
+         @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6.5vw;
+        }
     }   
 }

@@ -12,7 +12,6 @@ const listStep = [
 ]
 
 const Booking = () => {
-
     const stepMemo = useMemo(() => {
         return listStep.map(({ img, title, content }, index) => (
             <div key={index} data-aos="fade-up" data-aos-duration="2000" className="border-[0.5vw] border-booking p-[1vw] shadow-custom1 rounded-[0.5vw]">
