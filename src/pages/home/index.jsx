@@ -15,7 +15,7 @@ const Home = () => {
             <Banner />
             <About />
             <Benefit />
-            <OptionMotobike />
+            {/* <OptionMotobike /> */}
             <Booking />
             <Highlights />
             <Introduce />

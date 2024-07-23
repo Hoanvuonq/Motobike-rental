@@ -26,7 +26,7 @@ const Booking = () => {
         ))
     }, [listStep])
     return (
-        <div className=" flex flex-col gap-[3vw] lg:py-[2vw] py-[20vw]">
+        <div className="flex flex-col gap-[3vw] lg:py-[2vw] py-[20vw]">
             <SecTitle title='Đặt xe tại T-BIKE' />
             <div className="booking all-center md:flex-row flex-col lg:gap-[2vw] gap-[8vw]">
                 {stepMemo}

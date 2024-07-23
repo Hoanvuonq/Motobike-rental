@@ -63,6 +63,7 @@ const Category = () => {
         autoplay: true,
         autoplaySpeed: 4000,
 
+
     };
 
     return (

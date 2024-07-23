@@ -17,7 +17,6 @@ const resources = {
             "search": "Search Now",
 
         },
-
     },
     vi: {
         translation: {
@@ -32,7 +31,6 @@ const resources = {
             "contentHeader": "Tìm kiếm chiếc xe máy lý tưởng của bạn tại đại lý đang phát triển T- BIKE.",
             "search": "Tìm Kiếm",
         },
-
     }
 };
 
