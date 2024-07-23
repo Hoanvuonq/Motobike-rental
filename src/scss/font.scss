@@ -129,6 +129,11 @@
         font-size: 1.2vw;
         line-height: 1.2vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 4.5vw;
+            line-height: 4.5vw;
+            font-weight: 600;
+        }
     }
 
     .font-content {
@@ -136,6 +141,10 @@
         font-size: 0.9vw;
         line-height: 1.2vw;
         font-weight: 400;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6vw;
+        }
     }
 }
 
@@ -145,6 +154,10 @@
         font-size: 1.2vw;
         line-height: 1.2vw;
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 8vw;
+        }
     }
 
     .font-content {
@@ -152,6 +165,11 @@
         font-size: 0.9vw;
         line-height: 1.2vw;
         font-weight: 400;
+
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6vw;
+        }
     }
 }
 
@@ -271,7 +289,7 @@
         font-weight: 700;
         @media (max-width: 768px) {
             font-size: 4vw;
-            line-height: 6.5vw;
+            line-height: 4vw;
         }
     }
     .font-content {

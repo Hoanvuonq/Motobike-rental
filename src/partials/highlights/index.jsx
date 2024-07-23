@@ -40,7 +40,7 @@ const Highlights = () => {
                         Hãy để mỗi lần lái xe là một trải nghiệm đáng nhớ!
                     </p>
                 </div>
-                <div className="flex flex-col lg:gap-[2vw] gap-[8vw] lg:w-[38vw] w-[90vw]">
+                <div className="flex flex-col lg:gap-[2vw] gap-[8vw] lg:w-[38vw] w-[90vw] overflow-hidden">
                     <div data-aos="fade-left" data-aos-delay="0" className="flex items-start lg:gap-[2vw] gap-[6vw]">
                         <img src={Quotation} alt="Quotation" className='lg:w-[5vw] w-[20vw] opacity-40' />
                         <div className="flex flex-col lg:gap-[0.5vw] gap-[5vw] lg:border-l-[0.4vw] border-l-[1vw] border-mainColor lg:pl-[1vw] pl-[3vw]">

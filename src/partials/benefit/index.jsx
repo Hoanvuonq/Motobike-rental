@@ -22,6 +22,7 @@ const Benefit = () => {
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
+    const columsMobile = 1
     const chunkedTrust = useMemo(() => {
         const chunkArray = (array, size) => {
             return array.reduce((result, item, index) => {
@@ -33,18 +34,18 @@ const Benefit = () => {
                 return result;
             }, []);
         };
-        return chunkArray(listTrust, 2);
+        return chunkArray(listTrust, 1);
     }, [listTrust]);
 
     return (
-        <div className="flex flex-col gap-[3vw] py-[2vw]">
+        <div className="flex flex-col lg:gap-[3vw] gap-[6vw] lg:py-[2vw] py-[10vw]">
             <SecTitle title='Lợi ích của T-BIKE' />
-            <div className="flex flex-col gap-[2vw]">
+            <div className="flex flex-col lg:gap-[2vw] gap-[10vw]">
                 {chunkedTrust.map((pair, index) => (
                     <div key={index} className="flex gap-[4vw]">
                         {pair.map(({ images, title, content }, innerIndex) => (
-                            <div key={innerIndex} data-aos="fade-up" className="flex items-center gap-[1.5vw] w-[40vw] trust">
-                                <img src={images} alt="icon trust" className='w-[5vw] h-[5vw]  scale-icon' />
+                            <div key={innerIndex} data-aos="fade-up" className="flex items-center lg:gap-[1.5vw] gap-[5vw] lg:w-[40vw] w-[90vw] trust">
+                                <img src={images} alt="icon trust" className='lg:w-[5vw] w-[20vw] lg:h-[5vw] h-[20vw] scale-icon' />
                                 <div className="flex flex-col items-start gap-[1vw]">
                                     <p className='font-title'>{title}</p>
                                     <p className='font-content'>{content}</p>

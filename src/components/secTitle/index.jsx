@@ -7,7 +7,7 @@ const SecTitle = ({ title }) => {
         Aos.init({ duration: 2000 })
     }, [])
     return (
-        <div className="secTitle home">
+        <div className="secTitle home lg:py-[1vw] py-[4vw]">
             <h3 data-aos="fade-right" className="title font-title !text-black inline-block">
                 {title}
             </h3>
