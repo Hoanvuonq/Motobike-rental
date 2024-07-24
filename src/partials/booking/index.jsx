@@ -1,5 +1,6 @@
+import Aos from 'aos'
 import 'aos/dist/aos.css'
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import SecTitle from '../../components/secTitle';
 import Step1 from '../../assets/icon/step1.jpg'
 import Step2 from '../../assets/icon/step2.jpg'
@@ -12,9 +13,12 @@ const listStep = [
 ]
 
 const Booking = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
     const stepMemo = useMemo(() => {
         return listStep.map(({ img, title, content }, index) => (
-            <div key={index} data-aos="fade-up" data-aos-duration="2000" className="border-[0.5vw] border-booking lg:p-[1vw] p-[4vw] shadow-custom1 rounded-[0.5vw]">
+            <div key={index} data-aos="fade-right" className="border-[0.5vw] border-booking lg:p-[1vw] p-[4vw] shadow-custom1 rounded-[0.5vw]">
                 <div className="all-center p-[2.5vw] gap-[2vw] flex-col lg:w-auto w-[80vw] border-dashed border-[0.2vw] rounded-[0.5vw]">
                     <img src={img} alt="Step 1" className='lg:w-[14vw] w-[80vw] scale-icon' />
                     <div className="all-center flex-col gap-[1vw]">
