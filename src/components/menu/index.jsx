@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useRef, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Logo from '../../assets/logo/t-bike_logo.png'
+import Logo from '../../assets/logo/t-bike_logo.png';
 
 const listMenu = [
     { key: 'home', link: '/' },
@@ -18,25 +18,40 @@ const Menu = ({ isOpen, onClose }) => {
         if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
             onClose();
         }
-        if (isOpen) document.addEventListener("mousedown", handleClickOutside);
-        return () => { document.removeEventListener("mousedown", handleClickOutside) };
+    };
+
+    const handleLinkClick = () => {
+        onClose();
     };
 
     const listMenuMemo = useMemo(() => {
         return listMenu.map(({ key, link }, index) => (
             <li key={index} className="li-menu border-b-[0.1vw] p-[2vw] border-gray">
-                <Link to={link} className="text-menu-header" >
+                <Link to={link} className="text-menu-header" onClick={handleLinkClick}>
                     {t(key)}
                 </Link>
             </li>
-        ))
-    }, [listMenu])
+        ));
+    }, [t]);
 
-    const handleClose = () => { onClose() }
-    const handleInsideClick = (e) => { e.stopPropagation() };
+    const handleClose = () => {
+        onClose();
+    };
+
+    const handleInsideClick = (e) => {
+        e.stopPropagation();
+    };
 
     useEffect(() => {
-    }, [isOpen, onClose, handleClickOutside]);
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
 
     return (
         <div>
@@ -50,7 +65,7 @@ const Menu = ({ isOpen, onClose }) => {
                 </ul>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Menu
+export default Menu;

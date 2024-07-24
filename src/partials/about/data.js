@@ -5,20 +5,20 @@ import Item03 from '../../assets/img/about3.jpg'
 export const listAbout = [
     {
         images: Item01,
-        title: "Phong Cách Hiện Đại",
-        content: "Chúng tôi tự hào mang đến cho bạn những mẫu xe hiện đại và thời thượng, đáp ứng mọi phong cách sống của bạn.",
+        title: "about.title1",
+        content: "about.content1",
         aosDelay: 300
     },
     {
         images: Item02,
-        title: "An Toàn Tuyệt Đối",
-        content: "Những dòng xe cho thuê được kiểm tra định kỳ và bảo dưỡng kỹ lưỡng, đảm bảo an toàn tuyệt đối cho mọi khách hàng.",
+        title: "about.title2",
+        content: "about.content2",
         aosDelay: 700
     },
     {
         images: Item03,
-        title: "Đa Dạng Lựa Chọn",
-        content: "Với nhiều mẫu mã và kiểu dáng, chúng tôi mang đến những lựa chọn hoàn hảo, phù hợp với cá tính và sở thích của từng khách hàng.",
+        title: "about.title3",
+        content: "about.content3",
         aosDelay: 1200
     },
 ];

@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
             <main className="w-full all-center relative z-10">
                 {children}
             </main>
-            <div className="fixed right-[3vw] z-40 bottom-[2vw]">
+            <div className="fixed lg:right-[1vw] right-[3vw] z-40 bottom-[2vw]">
                 <Social />
             </div>
             <Footer className="relative z-20" />

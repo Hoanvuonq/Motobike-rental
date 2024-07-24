@@ -76,8 +76,8 @@
     height: 3.5vw;
     border-radius: 100%;
     @media (max-width: 768px) {
-        width: 20vw;
-        height: 20vw;
+        width: 17vw;
+        height: 17vw;
     }
 
 }
@@ -90,8 +90,8 @@
     height: 3.5vw;
     border-radius: 100%;
     @media (max-width: 768px) {
-        width: 20vw;
-        height: 20vw;
+        width: 17vw;
+        height: 17vw;
     }
 }
 .shadow-custom1 {
@@ -221,7 +221,21 @@ input[type="checkbox"]:checked::before {
     to {
       width: 100%;
     }
-  }
+}
+
+.banner-nhatrang {
+    background-image: url(../assets/logo/banner-nhatrang.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-danang {
+    background-image: url(../assets/logo/banner-danang.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .bg-banner {
     background-image: url(../assets/img/banner-moto-1.jpg);
@@ -237,6 +251,36 @@ input[type="checkbox"]:checked::before {
         clip-path: polygon(90% 100%, 121% 80%, 100% 0, 100% 0, 0 0, 0 94%);
     }
 }
+
+.bg-danang {
+    background-image: url(../assets/logo/banner-danang.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 300px 0px 300px 0px;
+    clip-path: polygon(88% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+
+    @media (max-width: 768px) {
+        padding: 400px 0px 400px 0px;
+        clip-path: polygon(90% 100%, 121% 80%, 100% 0, 100% 0, 0 0, 0 94%);
+    }
+}
+.bg-nhatrang {
+    background-image: url(../assets/logo/banner-nhatrang.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 300px 0px 300px 0px;
+    clip-path: polygon(88% 100%, 100% 80%, 100% 0, 100% 0, 0 0, 0 90%);
+
+    @media (max-width: 768px) {
+        padding: 400px 0px 400px 0px;
+        clip-path: polygon(90% 100%, 121% 80%, 100% 0, 100% 0, 0 0, 0 94%);
+    }
+}
+
 .bg-option {
     background-image: url(../assets/img/banner-motoaa.jpg);
     background-position: center center;
@@ -290,6 +334,8 @@ input[type="checkbox"]:checked::before {
     left: 0;
     position: absolute;
 }
+
+
 
 .bg-overLay {
     position: absolute;
@@ -482,4 +528,50 @@ input[type="checkbox"]:checked::before {
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bg-overlayBanner {
+    background-color: #0000009f;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.animateShine {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover .bg-overlayBanner {
+        opacity: 0;
+    }
+
+    &:hover::before {
+        animation: shine 2s;
+        
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -85%;
+        z-index: 2;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+        -webkit-transform: skewX(-25deg);
+        transform: skewX(-25deg);
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }

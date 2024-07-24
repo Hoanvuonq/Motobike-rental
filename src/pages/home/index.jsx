@@ -2,7 +2,7 @@ import React from 'react';
 import Benefit from '../../partials/benefit';
 import Booking from '../../partials/booking';
 import Carousel from '../../components/carousel';
-import Banner from '../../components/banner';
+import Banner from '../../components/banner/bannerHome';
 import OptionMotobike from '../../partials/optionMotobike';
 import Highlights from '../../partials/highlights';
 import Introduce from '../../partials/introduce';
@@ -15,12 +15,12 @@ const Home = () => {
             <Banner />
             <About />
             <Benefit />
-            {/* <OptionMotobike /> */}
+            <OptionMotobike />
             <Booking />
             <Highlights />
             <Introduce />
             <Category />
-            <Carousel />
+            {/* <Carousel /> */}
         </div>
     );
 };

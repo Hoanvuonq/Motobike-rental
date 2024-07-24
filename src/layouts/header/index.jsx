@@ -8,10 +8,10 @@ import Language from '../../partials/language';
 import { useTranslation } from 'react-i18next';
 
 const listMenu = [
-    { key: 'home', link: '/' },
-    { key: 'rentalDanang', link: '/rental-danang' },
-    { key: 'rentalNhatrang', link: '/rental-nhatrang' },
-    { key: 'contact', link: '#' }
+    { key: 'navbar.home', link: '/' },
+    { key: 'navbar.rentalDanang', link: '/rental-danang' },
+    { key: 'navbar.rentalNhatrang', link: '/rental-nhatrang' },
+    { key: 'navbar.contact', link: '#' }
 ];
 
 const Header = () => {
@@ -81,8 +81,8 @@ const Header = () => {
                             <div className="all-center gap-[1vw]">
                                 <img src={iconPhone} alt="Icon Phone" className='xl:w-[1.5vw] w-[3vw] rings' />
                                 <div className="flex flex-col gap-[0.4vw]">
-                                    <p className='font-title text-white'>{t('call_now')}</p>
-                                    <p className='font-content text-white'>{t('phone_number')}</p>
+                                    <p className='font-title text-white'>{t('navbar.call_now')}</p>
+                                    <p className='font-content text-white'>{t('navbar.phone_number')}</p>
                                 </div>
                             </div>
                         </Link>
