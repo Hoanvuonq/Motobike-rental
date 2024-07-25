@@ -77,6 +77,14 @@ const en = {
             book: "Book a car now!",
             seemore: "SEE MORE",
         },
+        rentalDaNang: {
+            category: "Category",
+            motorbikes: "Motorcycle",
+            manualMotorcycle: "Manual Motorcycle",
+            scooters: "Scooter",
+            car: "Car",
+            booking: "Book Now",
+        },
     }
 };
 

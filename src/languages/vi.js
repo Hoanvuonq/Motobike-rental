@@ -77,6 +77,14 @@ const vi = {
             book: "Đặt xe ngay !",
             seemore: "XEM THÊM",
         },
+        rentalDaNang: {
+            category: "Danh mục",
+            motorbikes: "Xe Máy",
+            manualMotorcycle: "Xe Tay Côn",
+            scooters: "Xe Tay Ga",
+            car: "Xe Ô tô",
+            booking: "Đặt Ngay",
+        },
     }
 };
 

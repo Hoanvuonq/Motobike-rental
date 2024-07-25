@@ -20,7 +20,7 @@ const Home = () => {
             <Highlights />
             <Introduce />
             <Category />
-            {/* <Carousel /> */}
+            <Carousel />
         </div>
     );
 };

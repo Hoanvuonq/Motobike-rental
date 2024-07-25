@@ -412,3 +412,69 @@
         }
     }   
 }
+
+.asideCategory {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.5vw;
+        line-height: 3vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 9vw;
+            line-height: 10vw;
+        }
+    }
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1.6vw;
+        font-weight: 400;
+        
+    }   
+}
+
+.itemsCard {
+    .font-title {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.2vw;
+        line-height: 2vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 6vw;
+            line-height: 6.5vw;
+        }
+       
+    }
+    .font-content {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1.6vw;
+        font-weight: 400;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 5vw;
+        }
+    }   
+    .font-text {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.8vw;
+        line-height: 1.6vw;
+        font-weight: 400;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 5vw;
+        }
+    }   
+}
+
+.font-category {
+    font-family: "Signika Negative", sans-serif;
+    font-size: 1vw;
+    line-height: 1.6vw;
+    font-weight: 400;
+    @media (max-width: 768px) {
+        font-size: 5.5vw;
+        line-height: 7vw;
+        font-weight: 400;
+    }
+}

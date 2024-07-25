@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const location = [
     { className: 'banner-nhatrang', location: 'banner.locationNhaTrang', link: '/rental-nhatrang' },
-    { className: 'banner-danang', location: 'banner.locationDaNang', link: ' / rental - danang' },
+    { className: 'banner-danang', location: 'banner.locationDaNang', link: '/rental-danang' },
 ]
 
 const Search = () => {
