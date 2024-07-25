@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import Logo from '../../assets/logo/t-bike_logo.png';
 
 const listMenu = [
-    { key: 'home', link: '/' },
-    { key: 'rentalDanang', link: '/rental-danang' },
-    { key: 'rentalNhatrang', link: '/rental-nhatrang' },
-    { key: 'contact', link: '#' }
+    { key: 'navbar.home', link: '/' },
+    { key: 'navbar.rentalDanang', link: '/rental-danang' },
+    { key: 'navbar.rentalNhatrang', link: '/rental-nhatrang' },
+    { key: 'navbar.contact', link: '#' }
 ];
 
 const Menu = ({ isOpen, onClose }) => {

@@ -319,6 +319,10 @@
         font-size: 1vw;
         line-height: 1.6vw;
         font-weight: 100;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 6vw;
+        }
     }   
 }
 
@@ -429,7 +433,7 @@
         font-size: 1vw;
         line-height: 1.6vw;
         font-weight: 400;
-        
+       
     }   
 }
 

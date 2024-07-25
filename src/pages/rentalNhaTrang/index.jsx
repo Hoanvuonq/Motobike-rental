@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Carousel from '../../components/carousel';
-import Banner from '../../components/banner/bannerNhaTrang'
-import AsideCategory from '../../partials/card/asideCategory'
-import ContentCard from '../../partials/card/contentCard'
+import Banner from '../../components/banner/bannerNhaTrang';
+import AsideCategory from '../../partials/card/asideCategory';
+import ContentCard from '../../partials/card/contentCard';
 
 const RentalNhaTrang = () => {
+    const { city } = useParams();
     const [filter, setFilter] = useState(['scooters']);
 
     const handleFilterChange = (value) => {
@@ -19,14 +21,14 @@ const RentalNhaTrang = () => {
 
     return (
         <div className='all-center w-full flex-col'>
-            <Banner />
+            <Banner location={city} />
             <div className="flex justify-between w-full px-[4vw] py-[4vw] gap-[6vw] lg:flex-row flex-col">
                 <AsideCategory onFilterChange={handleFilterChange} selectedFilters={filter} />
-                <ContentCard filter={filter} />
+                <ContentCard filter={filter} location={city} />
             </div>
             <Carousel />
         </div>
     );
-}
+};
 
-export default RentalNhaTrang
+export default RentalNhaTrang;

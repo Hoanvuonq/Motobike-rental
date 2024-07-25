@@ -6,9 +6,10 @@ import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const ContentCard = ({ filter }) => {
+const ContentCard = ({ filter, city }) => {
     const maxItems = 16;
     const { t } = useTranslation();
+
     const listCategory = useMemo(() => {
         return [...Array(maxItems).keys()].map((data, index) => {
             const items = `moto${data + 1}`;
@@ -16,8 +17,9 @@ const ContentCard = ({ filter }) => {
             const images = dataMotoBike.images;
             const title = dataMotoBike.title[index];
             const typeFilter = dataMotoBike.type[index].replace('rentalDaNang.', '');
-            const type = dataMotoBike.type[index]
-            const location = dataMotoBike.location[0];
+            const type = dataMotoBike.type[index];
+            const locationIndex = city === 'danang' ? 1 : 1;
+            const location = dataMotoBike.location[locationIndex];
 
             if (filter.length > 0 && !filter.includes(typeFilter)) {
                 return null;
@@ -50,7 +52,7 @@ const ContentCard = ({ filter }) => {
                 </CSSTransition>
             );
         }).filter(Boolean);
-    }, [t, filter]);
+    }, [t, filter, city]);
 
     return (
         <div className="grid lg:grid-cols-4 grid-cols-1 lg:w-[80vw] w-full lg:gap-[1vw] gap-[4vw]">
