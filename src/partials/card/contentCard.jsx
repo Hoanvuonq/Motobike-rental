@@ -3,12 +3,16 @@ import Location from '../../assets/icon/location-card.svg';
 import Button from '../../components/button';
 import { renderMotoCard } from './card';
 import { CSSTransition } from 'react-transition-group';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const ContentCard = ({ filter, city }) => {
+const ContentCard = ({ filter }) => {
     const maxItems = 16;
     const { t } = useTranslation();
+    const location = useLocation();
+
+    const city = location.pathname.includes('danang') ? 'danang' : 'nhatrang';
+    const locationIndex = city === 'danang' ? 0 : 1;
 
     const listCategory = useMemo(() => {
         return [...Array(maxItems).keys()].map((data, index) => {
@@ -18,7 +22,6 @@ const ContentCard = ({ filter, city }) => {
             const title = dataMotoBike.title[index];
             const typeFilter = dataMotoBike.type[index].replace('rentalDaNang.', '');
             const type = dataMotoBike.type[index];
-            const locationIndex = city === 'danang' ? 1 : 1;
             const location = dataMotoBike.location[locationIndex];
 
             if (filter.length > 0 && !filter.includes(typeFilter)) {
@@ -52,7 +55,7 @@ const ContentCard = ({ filter, city }) => {
                 </CSSTransition>
             );
         }).filter(Boolean);
-    }, [t, filter, city]);
+    }, [t, filter, locationIndex]);
 
     return (
         <div className="grid lg:grid-cols-4 grid-cols-1 lg:w-[80vw] w-full lg:gap-[1vw] gap-[4vw]">

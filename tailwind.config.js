@@ -13,13 +13,16 @@ module.exports = withMT({
         about: "#f8f8f8",
         phone: "#6fd626",
         layout: "#343434",
-        itemsCheckbox: "rgba(0, 0, 0, 0.03)"
+        itemsCheckbox: "rgba(0, 0, 0, 0.03)",
+        colorContact: "#EEEEEE"
       },
       borderColor: {
         header: "rgba(255, 255, 255, 0.25)",
         boxSearch: "rgba(255,255,255,.15)",
         items: "#f2f6f7",
-        card: "#e6e6e6"
+        card: "#e6e6e6",
+        contact: "#DDDDDD",
+        footer: "rgba(255, 255, 255, 0.2);"
       },
     },
   },

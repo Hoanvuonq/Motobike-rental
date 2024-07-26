@@ -3,7 +3,6 @@ import React, { useId } from "react";
 
 const CheckBox = (props) => {
     const { label, value, onChange, checked } = props;
-
     const id = useId();
 
     return (

@@ -6,7 +6,7 @@ const en = {
             rentalNhatrang: "Motorbike Rental - Nha Trang",
             contact: "Contact",
             call_now: "Call Us Today!",
-            phone_number: "0983477477",
+            phone_number: "0983 477 477",
         },
         banner: {
             sloganHeader: "TAKING RIDES TO A NEWER LEVEL",
@@ -84,6 +84,31 @@ const en = {
             scooters: "Scooter",
             car: "Car",
             booking: "Book Now",
+        },
+        tourist: {
+            title: "Tourist attraction",
+        },
+        contact: {
+            title: "CONTACT US",
+            contact: "Schedule A Ride",
+            time: "Operating Hours",
+            email: "Reach us by email",
+            phone: "0983 477 477",
+            location: "Our Address",
+            beginTime: "Mon - Fri 9.30am - 8pm",
+            contentEmail: "tbikedn@gmail.com",
+            contentLocation: "110 Tran Van Du, My An, Ngu Hanh Son, Da Nang City",
+        },
+        footer: {
+            lastestNews: "LATEST NEWS",
+            subscribe: "SIGN UP FOR UPDATES",
+            content: "T-BIKE We are committed to providing quality, absolutely safe motorbike and car rental services. Vehicles are regularly maintained to ensure the best performance. Let T-BIKE accompany you on every journey!",
+            contact: "CONTACT",
+            location: "110 Tran Van Du, My An, Ngu Hanh Son, Da Nang City",
+            phone: "0983 477 477",
+            mail: "tbikedn@gmail.com",
+            website: "www.tbikedanang.com",
+            about: "INTRODUCTION TO T - BIKE"
         },
     }
 };

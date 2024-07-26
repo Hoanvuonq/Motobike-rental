@@ -6,7 +6,7 @@ const vi = {
             rentalNhatrang: "Cho Thuê Xe Máy - Nha Trang",
             contact: "Liên hệ",
             call_now: "Đặt xe ngay!",
-            phone_number: "0983477477",
+            phone_number: "0983 477 477",
         },
         banner: {
             sloganHeader: "ĐƯA CHUYẾN ĐI LÊN MỘT TẦM CAO MỚI",
@@ -84,6 +84,31 @@ const vi = {
             scooters: "Xe Tay Ga",
             car: "Xe Ô tô",
             booking: "Đặt Ngay",
+        },
+        tourist: {
+            title: "Địa điểm du lịch",
+        },
+        contact: {
+            title: "LIÊN HỆ VỚI CHÚNG TÔI",
+            contact: "Lên lịch chuyến đi",
+            time: " Giờ hoạt động ",
+            email: " Liên hệ với chúng tôi qua email ",
+            phone: "0983 477 477 ",
+            location: "Địa chỉ của chúng tôi",
+            beginTime: " Thứ Hai - Thứ Sáu 9.30 sáng - 8 giờ tối ",
+            contentEmail: " tbikedn@gmail.com ",
+            contentLocation: " 110 Trần Văn Du, Mỹ An, Ngũ Hành Sơn, Thành phố Đà Nẵng ",
+        },
+        footer: {
+            lastestNews: "TIN TỨC MỚI NHẤT",
+            subscribe: "ĐĂNG KÝ ĐỂ CẬP NHẬT",
+            content: "T-BIKE Chúng tôi cam kết mang đến dịch vụ cho thuê xe máy và ô tô chất lượng, an toàn tuyệt đối. Xe được bảo trì định kỳ, đảm bảo hoạt động tốt nhất. Hãy để T-BIKE đồng hành cùng bạn trên mọi hành trình!",
+            contact: "LIÊN HỆ",
+            location: "110 Trần Văn Dư, Mỹ An, Ngũ Hành Sơn, TP Đà Nẵng",
+            phone: "0983 477 477",
+            mail: "tbikedn@gmail.com",
+            website: "www.tbikedanang.com",
+            about: "GIỚI THIỆU VỀ T - BIKE"
         },
     }
 };

@@ -4,6 +4,7 @@ import SecTitle from '../secTitle';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useTranslation } from 'react-i18next';
 
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
@@ -28,6 +29,7 @@ const PrevArrow = (props) => {
 }
 
 const Carousel = () => {
+    const { t } = useTranslation();
     const settings = {
         speed: 500,
         slidesToShow: 5,
@@ -42,7 +44,7 @@ const Carousel = () => {
 
     return (
         <div className="flex flex-col gap-[3vw] py-[5vw] items-center">
-            <SecTitle title='Địa điểm du lịch' />
+            <SecTitle title={t('tourist.title')} />
             <div className="slider-container w-full">
                 <div className="max-w-[90vw] m-auto w-full">
                     <Slider {...settings} className="all-center">
