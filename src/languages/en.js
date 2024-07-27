@@ -98,6 +98,11 @@ const en = {
             beginTime: "Mon - Fri 9.30am - 8pm",
             contentEmail: "tbikedn@gmail.com",
             contentLocation: "110 Tran Van Du, My An, Ngu Hanh Son, Da Nang City",
+            sendMail: "SEND MESSAGE",
+            fullName: "Full Name",
+            email: "Email",
+            subject: "Subject",
+            message: "Message",
         },
         footer: {
             lastestNews: "LATEST NEWS",

@@ -5,7 +5,7 @@ import FormContact from '../../partials/formContact';
 
 const Contact = () => {
     return (
-        <div className='all-center w-full flex-col py-[3vw]'>
+        <div className='all-center w-full flex-col'>
             <Banner />
             <InfoContact />
             <FormContact />

@@ -56,8 +56,8 @@ const Footer = () => {
                         <h1 className='font-slogan text-mainColor'>{t('footer.lastestNews')}</h1>
                         <p className='font-title-mail text-white'>{t('footer.subscribe')}</p>
                     </div>
-                    <div className="flex items-center gap-[0.5vw]">
-                        <input type="email" className='bg-white focus:outline-none lg:indent-[0.5vw] indent-[3vw] lg:py-[0.8vw] py-[2vw] rounded-[0.5vw] lg:w-[30vw] w-[50vw]' required />
+                    <div className="flex items-center lg:gap-[0.5vw] gap-[1vw]">
+                        <input type="email" placeholder='Email' className='bg-white focus:outline-none lg:indent-[0.5vw] indent-[3vw] lg:py-[0.8vw] py-[2.5vw] rounded-[0.5vw] lg:w-[30vw] w-[60vw]' required />
                         <Button title={t('rentalDaNang.booking')} />
                     </div>
                 </div>

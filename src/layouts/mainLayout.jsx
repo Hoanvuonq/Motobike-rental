@@ -5,7 +5,7 @@ import Social from '../partials/social';
 
 const MainLayout = ({ children }) => {
     return (
-        <div className="all-center flex-col h-screen !justify-between">
+        <div className="all-center flex-col h-screen gap-[2vw] !justify-between">
             <Header className="relative z-20" />
             <main className="w-full all-center relative z-10">
                 {children}

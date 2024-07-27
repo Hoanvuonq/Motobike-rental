@@ -39,7 +39,30 @@ const Carousel = () => {
         centerMode: true,
         centerPadding: '0',
         nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
@@ -47,10 +70,10 @@ const Carousel = () => {
             <SecTitle title={t('tourist.title')} />
             <div className="slider-container w-full">
                 <div className="max-w-[90vw] m-auto w-full">
-                    <Slider {...settings} className="all-center">
+                    <Slider {...settings} className="all-center gap-[4vw]">
                         {Data.map(({ images }, index) => (
-                            <div key={index} className="mx-[0.5vw] px-[0.5vw] all-center flex-col relative scale-icon">
-                                <img src={images} alt="" className='object-cover w-full h-[22vw] rounded-[0.5vw]' />
+                            <div key={index} className="lg:mx-[0.5vw] mx-0 lg:px-[0.5vw] px-0 all-center flex-col relative scale-icon">
+                                <img src={images} alt="" className='object-cover w-full lg:h-[22vw] h-[90vw] lg:rounded-[0.5vw] rounded-[2vw]' />
                                 <div className="bg-overLay" />
                             </div>
                         ))}

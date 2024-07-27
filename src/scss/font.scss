@@ -502,8 +502,8 @@
         line-height: 1.5vw;
         font-weight: 700;
         @media (max-width: 768px) {
-            font-size: 9vw;
-            line-height: 10vw;
+            font-size: 5vw;
+            line-height: 7vw;
         }
     }
     .font-content {
@@ -511,7 +511,10 @@
         font-size: 0.9vw;
         line-height: 1.6vw;
         font-weight: 400;
-       
+        @media (max-width: 768px) {
+            font-size: 5vw;
+            line-height: 7vw;
+        }
     }   
 }
 
@@ -522,7 +525,7 @@
         line-height: 4vw;
         font-weight: 700;
         @media (max-width: 768px) {
-            font-size: 9vw;
+            font-size: 7vw;
             line-height: 10vw;
         }
     }

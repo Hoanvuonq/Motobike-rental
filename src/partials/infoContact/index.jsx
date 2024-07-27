@@ -16,11 +16,11 @@ const InfoContact = () => {
     const { t } = useTranslation();
     const contact = useMemo(() => {
         return contactList.map(({ images, title, content }, index) => (
-            <div key={index} className={`all-center !justify-between flex-col gap-[1vw] w-[16vw] px-[2.5vw] border-contact infoContact ${index !== contactList.length - 1 ? 'border-r' : ''}`}>
-                <div className="w-[7vw] h-[7vw] all-center">
-                    <img src={images} alt={t(title)} className='w-[7vw] h-[7vw] scale-icon' />
+            <div key={index} className={`all-center !justify-between flex-col gap-[1vw] lg:w-[16vw] w-[90vw] px-[2.5vw] border-contact infoContact border-none ${index !== contactList.length - 1 ? 'lg:border-r' : ''}`}>
+                <div className="all-center">
+                    <img src={images} alt={t(title)} className='lg:w-[7vw] w-[36vw] lg:h-[7vw] h-[36vw] scale-icon' />
                 </div>
-                <div className="all-center h-[10vw] !justify-start text-center flex-col pt-[1vw] gap-[0.5vw]">
+                <div className="all-center lg:h-[10vw] h-auto !justify-start text-center lg:w-auto w-[60vw] flex-col pt-[1vw] gap-[0.5vw]">
                     <p className='font-content'>{t(title)}</p>
                     <p className='font-title text-center '>{t(content)}</p>
                 </div>
@@ -28,7 +28,7 @@ const InfoContact = () => {
         ))
     }, [contactList, t])
     return (
-        <div className='all-center w-full px-[6vw] py-[4vw]'>
+        <div className='all-center w-full px-[6vw] lg:py-[6vw] py-[12vw] lg:!flex-row lg:gap-0 gap-[16vw] !flex-col'>
             {contact}
         </div>
     )

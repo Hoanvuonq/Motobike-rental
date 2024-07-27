@@ -5,7 +5,7 @@ import AsideCategory from '../../partials/card/asideCategory';
 import ContentCard from '../../partials/card/contentCard';
 
 const RentalDaNang = () => {
-    const [filter, setFilter] = useState(['motorbikes']);
+    const [filter, setFilter] = useState(['scooters']);
 
     const handleFilterChange = (value) => {
         setFilter(prev => {

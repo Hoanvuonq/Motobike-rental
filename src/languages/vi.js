@@ -98,6 +98,11 @@ const vi = {
             beginTime: " Thứ Hai - Thứ Sáu 9.30 sáng - 8 giờ tối ",
             contentEmail: " tbikedn@gmail.com ",
             contentLocation: " 110 Trần Văn Du, Mỹ An, Ngũ Hành Sơn, Thành phố Đà Nẵng ",
+            sendMail: "GỬI TIN NHẮN",
+            fullName: "Tên đầy đủ ",
+            email: "Email",
+            subject: "Chủ đề",
+            message: "Tin nhắn",
         },
         footer: {
             lastestNews: "TIN TỨC MỚI NHẤT",
