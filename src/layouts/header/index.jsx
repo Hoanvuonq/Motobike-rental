@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo/t-bike_logo.png';
 import IconMenu from '../../assets/img/icon-menu.png';
 import Menu from '../../components/menu';
@@ -19,6 +19,10 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const menuRef = useRef(null);
+
+    const location = useLocation();
+    const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
+    const locationIndex = city === 'nhatrang' ? '0848 771 771' : '0848 770 770';
 
     const handleToggle = () => {
         setIsOpen(prevState => !prevState);
@@ -77,12 +81,12 @@ const Header = () => {
                 <div className="items-center xl:flex gap-[2vw] hidden">
                     <div className="relative border-l-[0.01vw] border-header w-[0.1vw] h-[5.5vw]" />
                     <div className="phone h-full">
-                        <Link to={'tel:0983477477'}>
+                        <Link to={`tel:${locationIndex}`}>
                             <div className="all-center gap-[1vw]">
                                 <img src={iconPhone} alt="Icon Phone" className='xl:w-[1.5vw] w-[3vw] rings' />
                                 <div className="flex flex-col gap-[0.4vw]">
                                     <p className='font-title text-white'>{t('navbar.call_now')}</p>
-                                    <p className='font-content text-white'>{t('navbar.phone_number')}</p>
+                                    <p className='font-content text-white'>{locationIndex}</p>
                                 </div>
                             </div>
                         </Link>

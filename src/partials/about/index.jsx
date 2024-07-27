@@ -9,8 +9,8 @@ import { useTranslation } from 'react-i18next';
 const About = () => {
     const { t } = useTranslation();
     const about = useMemo(() => {
-        return listAbout.map(({ images, title, content, aosDelay }, index) => (
-            <div data-aos="fade-up" data-aos-delay={aosDelay} key={index} className="bg-about relative about lg:p-[1vw] p-[7vw] flex items-center flex-col lg:w-[20vw] w-[80vw] lg:h-[20vw] h-[75vw]">
+        return listAbout.map(({ images, title, content }, index) => (
+            <div data-aos="fade-up" key={index} className="bg-about relative about lg:p-[1vw] p-[7vw] flex items-center flex-col lg:w-[20vw] w-[80vw] lg:h-[20vw] h-[75vw]">
                 <div className="flex justify-between items-center flex-col gap-[1vw]">
                     <h1 className='uppercase font-title'>{t(title)}</h1>
                     <p className='font-content'>{t(content)}</p>

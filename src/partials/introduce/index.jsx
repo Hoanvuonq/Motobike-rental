@@ -8,9 +8,9 @@ import iconTroduce3 from '../../assets/icon/gas-station.svg'
 import { useTranslation } from 'react-i18next';
 
 const listControduce = [
-    { images: iconTroduce1, title: "introduce.text1", aosDelay: 700 },
-    { images: iconTroduce2, title: "introduce.text2", aosDelay: 800 },
-    { images: iconTroduce3, title: "introduce.text3", aosDelay: 900 },
+    { images: iconTroduce1, title: "introduce.text1" },
+    { images: iconTroduce2, title: "introduce.text2" },
+    { images: iconTroduce3, title: "introduce.text3" },
 ]
 
 const Introduce = () => {
@@ -19,8 +19,8 @@ const Introduce = () => {
         Aos.init({ duration: 2000 })
     }, [])
     const controduceMemo = useMemo(() => {
-        return listControduce.map(({ images, title, aosDelay }, index) => (
-            <div key={index} data-aos="fade-up" data-aos-delay={aosDelay} className="flex items-center lg:gap-[0.5vw] gap-[2vw]">
+        return listControduce.map(({ images, title }, index) => (
+            <div key={index} data-aos="fade-up" className="flex items-center lg:gap-[0.5vw] gap-[2vw]">
                 <div className="lg:w-[3vw] w-[16vw] lg:h-[3vw] h-[16vw] bg-gray-300 all-center rounded-full">
                     <img src={images} alt="icon hightlight" className='lg:w-[2vw] w-[8vw]' />
                 </div>

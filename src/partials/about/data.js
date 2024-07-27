@@ -7,18 +7,15 @@ export const listAbout = [
         images: Item01,
         title: "about.title1",
         content: "about.content1",
-        aosDelay: 300
     },
     {
         images: Item02,
         title: "about.title2",
         content: "about.content2",
-        aosDelay: 700
     },
     {
         images: Item03,
         title: "about.title3",
         content: "about.content3",
-        aosDelay: 1200
     },
 ];

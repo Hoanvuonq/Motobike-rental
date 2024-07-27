@@ -24,7 +24,11 @@ export const renderMotoCard = (name) => {
             location: [
                 'banner.locationDaNang',
                 'banner.locationNhaTrang',
-            ]
+            ],
+            phone: [
+                '0848770770',
+                '0848771771',
+            ],
         }
     }
 }

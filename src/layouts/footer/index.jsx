@@ -6,16 +6,9 @@ import Email from '../../assets/icon/email.svg'
 import Website from '../../assets/icon/website.svg'
 import Dots from '../../assets/icon/dot.svg'
 import BannerContent from '../../assets/img/banner-content-f.jpg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Button from '../../components/button'
 import { useTranslation } from 'react-i18next';
-
-const listContact = [
-    { title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
-    { title: 'footer.phone', img: Phone, link: "tel:0983477477" },
-    { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
-    { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
-];
 
 const listAbout = [
     { title: 'navbar.home', link: '/' },
@@ -26,6 +19,17 @@ const listAbout = [
 
 const Footer = () => {
     const { t } = useTranslation();
+    const location = useLocation();
+    const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
+    const locationIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
+
+    const listContact = [
+        { title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
+        { title: locationIndex, img: Phone, link: `tel:${locationIndex}` },
+        { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
+        { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
+    ];
+
     const infoContact = useMemo(() => {
         return listContact.map(({ title, img, link }, index) => (
             <span key={index} >

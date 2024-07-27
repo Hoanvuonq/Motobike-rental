@@ -1,13 +1,17 @@
 import React, { useMemo } from 'react'
 import Zalo from '../../assets/icon/zalo-social.png'
 import Phone from '../../assets/icon/phone-social.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
-const listSocial = [
-    { images: Zalo, color: "bg-zalo", style: 'fillColorZalo', link: 'https://zalo.me/0983477477' },
-    { images: Phone, color: "bg-phone", style: 'fillColorPhone', link: 'tel:0983477477' },
-]
 const Social = () => {
+    const location = useLocation();
+    const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
+    const locationIndex = city === 'nhatrang' ? '0848 771 771' : '0848 770 770';
+
+    const listSocial = [
+        { images: Zalo, color: "bg-zalo", style: 'fillColorZalo', link: `https://zalo.me/${locationIndex}` },
+        { images: Phone, color: "bg-phone", style: 'fillColorPhone', link: `tel:${locationIndex}` },
+    ]
 
     const socialMemo = useMemo(() => {
         return listSocial.map(({ images, color, link, style }, index) => (
@@ -16,7 +20,7 @@ const Social = () => {
                     <img src={images} alt="Social" className="lg:h-[1.5vw] h-[8vw] lg:w-[1.5vw] w-[8vw] rings relative z-20" />
                     <div className={`${style} zoom z-10 relative`}></div>
                 </Link>
-            </div>
+            </div >
 
         ));
     }, [listSocial]);

@@ -11,8 +11,9 @@ const ContentCard = ({ filter }) => {
     const { t } = useTranslation();
     const location = useLocation();
 
-    const city = location.pathname.includes('danang') ? 'danang' : 'nhatrang';
-    const locationIndex = city === 'danang' ? 0 : 1;
+    const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
+    const locationIndex = city === 'nhatrang' ? 1 : 0;
+    const phoneIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
 
     const listCategory = useMemo(() => {
         return [...Array(maxItems).keys()].map((data, index) => {
@@ -36,7 +37,7 @@ const ContentCard = ({ filter }) => {
                 >
                     <div className="border-items border-[0.1vw] cursor-pointer rounded-[1vw] lg:py-[1vw] py-[4vw] all-start flex-col itemsCard lg:shadow-custom2 shadow">
                         <div className="w-full all-center">
-                            <img src={images} alt="..." className='lg:w-[16vw] w-[80vw] lg:h-[10vw] h-[50vw] object-cover' />
+                            <img src={images} alt="Vehicle" className='lg:w-[16vw] w-[80vw] lg:h-[10vw] h-[50vw] object-cover' />
                         </div>
                         <div className="flex flex-col lg:gap-[0.7vw] gap-[4vw] w-full lg:py-[1vw] py-[2vw] px-[2vw]">
                             <div className="flex items-center justify-between ">
@@ -47,7 +48,7 @@ const ContentCard = ({ filter }) => {
                                 <img src={Location} alt="Location" className='lg:w-[1vw] w-[4vw]' />
                                 <p className='font-content'>{t(location)}</p>
                             </div>
-                            <Link to={'tel:0983477477'} className="w-full all-center">
+                            <Link to={`tel:${phoneIndex}`} className="w-full all-center">
                                 <Button title={t('rentalDaNang.booking')} />
                             </Link>
                         </div>
