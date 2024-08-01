@@ -326,6 +326,16 @@
             line-height: 4vw;
         }
     }
+    .font-topic2 {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 0.8vw;
+        line-height: 1.2vw;
+        font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 4vw;
+            line-height: 4vw;
+        }
+    }
     .font-content {
         font-family: "Signika Negative", sans-serif;
         font-size: 1vw;

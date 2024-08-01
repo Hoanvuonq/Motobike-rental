@@ -8,9 +8,9 @@ import Quotation from '../../assets/icon/quotation.svg'
 import { useTranslation } from 'react-i18next';
 
 const listIMG = [
-    { images: iconHighlights1, title: "hightlight.titleR1", content: "hightlight.contentR1" },
-    { images: iconHighlights2, title: "hightlight.titleR2", content: "hightlight.contentR1" },
-    { images: iconHighlights3, title: "hightlight.titleR3", content: "hightlight.contentR1" },
+    { images: iconHighlights1, title: "hightlight.titleR1", },
+    { images: iconHighlights2, title: "hightlight.titleR2", },
+    { images: iconHighlights3, title: "hightlight.titleR3", },
 ]
 
 const Highlights = () => {
@@ -20,11 +20,10 @@ const Highlights = () => {
     }, [])
     const listImagMemo = useMemo(() => {
         return listIMG.map(({ images, title, content, }, index) => (
-            <div key={index} data-aos="fade-left" className="flex items-center lg:gap-[0.5vw] gap-[4vw]">
+            <div key={index} data-aos="fade-left" className="flex items-center lg:gap-[1vw] gap-[4vw]">
                 <img src={images} alt="icon hightlight" className='lg:w-[4vw] w-[15vw]' />
                 <div className="flex items-center lg:gap-[1vw] gap-[3vw]">
-                    <p className='font-titlelist text-white lg:w-[10vw] w-[25vw]'>{t(title)}</p>
-                    <p className='font-contentList text-white lg:w-[20vw] w-[44vw]'>{t(content)}</p>
+                    <p className='font-titlelist text-white'>{t(title)}</p>
                 </div>
             </div>
         ))

@@ -9,8 +9,8 @@ import Step3 from '../../assets/icon/step3.jpg'
 
 const listStep = [
     { img: Step1, title: "booking.title1", content: "booking.content1" },
-    { img: Step2, title: "booking.title1", content: "booking.content1" },
-    { img: Step3, title: "booking.title1", content: "booking.content1" },
+    { img: Step2, title: "booking.title2", content: "booking.content2" },
+    { img: Step3, title: "booking.title3", content: "booking.content3" },
 ]
 
 const Booking = () => {

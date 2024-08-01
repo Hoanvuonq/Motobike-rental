@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import Logo from '../../assets/logo/t-bike_logo.png'
+import Logo from '../../assets/logo/logo-tbike-new.jpg'
 import Location from '../../assets/icon/location.svg'
 import Phone from '../../assets/icon/phone.svg'
 import Email from '../../assets/icon/email.svg'
@@ -9,6 +9,7 @@ import BannerContent from '../../assets/img/banner-content-f.jpg'
 import { Link, useLocation } from 'react-router-dom'
 import Button from '../../components/button'
 import { useTranslation } from 'react-i18next';
+import Facebook from '../../assets/icon/icon-facebook.png'
 
 const listAbout = [
     { title: 'navbar.home', link: '/' },
@@ -25,6 +26,7 @@ const Footer = () => {
 
     const listContact = [
         { title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
+        { title: 'footer.location2', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
         { title: locationIndex, img: Phone, link: `tel:${locationIndex}` },
         { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
         { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
@@ -61,27 +63,32 @@ const Footer = () => {
                         <p className='font-title-mail text-white'>{t('footer.subscribe')}</p>
                     </div>
                     <div className="flex items-center lg:gap-[0.5vw] gap-[1vw]">
-                        <input type="email" placeholder='Email' className='bg-white focus:outline-none lg:indent-[0.5vw] indent-[3vw] lg:py-[0.8vw] py-[2.5vw] rounded-[0.5vw] lg:w-[30vw] w-[60vw]' required />
+                        <input type="phone" placeholder={t('footer.phone')} className='bg-white focus:outline-none lg:indent-[0.5vw] indent-[3vw] lg:py-[0.8vw] py-[2.5vw] rounded-[0.5vw] lg:w-[30vw] w-[60vw]' required />
                         <Button title={t('rentalDaNang.booking')} />
                     </div>
                 </div>
             </div>
-            <div className='bg-layout w-full all-start flex-col !justify-between lg:pt-[1.5vw] pt-[3vw] gap-[2vw] '>
+            <div className='bg-layout w-full all-start flex-col !justify-between lg:pt-[3vw] pt-[3vw] gap-[2vw] '>
                 <div className="flex items-center justify-between lg:gap-[5vw] gap-[16vw] w-full px-[6vw] lg:flex-row flex-col pb-[2vw]">
                     <div className="flex justify-start items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
                         <div className="flex flex-col lg:gap-[2vw] gap-[4vw]">
                             <div className="flex items-center lg:justify-between justify-center">
                                 <Link to={'/'}>
-                                    <img src={Logo} alt="Logo" className='lg:w-[6vw] w-[32vw]' />
+                                    <img src={Logo} alt="Logo" className='lg:w-[6vw] w-[32vw] rounded-full' />
                                 </Link>
                             </div>
                             <h1 className='font-content'>{t('footer.content')}</h1>
                             <Link className="border-items border-[0.1vw] rounded-[1vw] w-[90vw] h-[40vw] banner-content relative animateShine scale-icon lg:hidden block ">
                                 <div className="bg-overlayBanner !opacity-80 rounded-[1vw]" />
                             </Link>
+                            {/* <span >
+                                <Link to={'https://www.facebook.com/profile.php?id=100063470564198'} className="flex items-center lg:gap-[0.5vw] gap-[1vw] hover-items">
+                                    <img src={Facebook} alt='Facebook' className='lg:w-[1.5vw] w-[5vw]' />
+                                </Link>
+                            </span> */}
+
                         </div>
                     </div>
-
                     <div className="flex justify-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
                         <div className="flex flex-col lg:gap-[2vw] gap-[4vw]">
                             <h1 className='font-title'>{t('footer.contact')}</h1>

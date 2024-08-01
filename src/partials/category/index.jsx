@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import SecTitle from '../../components/secTitle';
 import { renderMoto } from './category';
@@ -12,42 +12,23 @@ import { useTranslation } from 'react-i18next';
 const Category = () => {
     const { t } = useTranslation();
     const [itemsToShow, setItemsToShow] = useState(8);
+    const [showLocations, setShowLocations] = useState(false);
     const maxItems = 16;
+    const orderRef = useRef(null);
+    // const articleRef = useRef(null);
 
-    const listCategory = useMemo(() => {
-        return [...Array(maxItems).keys()].map((data, index) => {
-            const items = `moto${data + 1}`;
-            const dataMotoBike = renderMoto(items)[items];
-            const images = dataMotoBike.images;
-            const title = dataMotoBike.title[index];
+    // const handleClickOutside = (event) => {
+    //     if (articleRef.current && !articleRef.current.contains(event.target)) {
+    //         setShowLocations(false);
+    //     }
+    // };
 
-            return (
-                <CSSTransition
-                    key={index}
-                    classNames="item"
-                    timeout={500}
-                >
-                    <article className="items-category all-center lg:py-[1vw] py-[4vw]">
-                        <div className="items-products w-full h-full relative border-[0.1vw] border-items bg-white shadow-lg lg:rounded-t-[1vw] rounded-t-[4vw]">
-                            <div className="items-content lg:py-[4vw] py-[8vw] all-center relative">
-                                <img src={images} alt={title} className='lg:w-[18vw] w-[80vw] lg:h-[12vw] h-[50vw] object-cover' />
-                            </div>
-                            <div className="fl-woo-item-bottom-content mt-[1vw] relative">
-                                <div className="fl--woo-add-to-cart-wrap all-center pt-[1.5vw] mb-[20px]">
-                                    <p className='font-topic'>{t(title)}</p>
-                                    <div className="fl--order">
-                                        <Link to={''} className="order-now bg-black lg:!rounded-b-[1vw] !rounded-b-[4vw]">
-                                            <p className='text-white font-topic'>{t('category.book')}</p>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </CSSTransition>
-            );
-        });
-    }, [t]);
+    // useEffect(() => {
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => {
+    //         document.removeEventListener("mousedown", handleClickOutside);
+    //     };
+    // }, []);
 
     const handleShowMore = () => {
         setItemsToShow(prevItems => Math.min(prevItems + 8, maxItems));
@@ -65,6 +46,56 @@ const Category = () => {
         autoplay: true,
         autoplaySpeed: 4000,
     };
+
+    const listCategory = useMemo(() => {
+        return [...Array(maxItems).keys()].map((data, index) => {
+            const items = `moto${data + 1}`;
+            const dataMotoBike = renderMoto(items)[items];
+            const images = dataMotoBike.images;
+            const title = dataMotoBike.title[index];
+
+            return (
+                <CSSTransition
+                    key={index}
+                    classNames="item"
+                    timeout={500}
+
+                >
+                    <article className="items-category all-center lg:py-[1vw] py-[4vw]">
+                        <div className="items-products w-full h-full relative border-[0.1vw] border-items bg-white shadow-lg lg:rounded-t-[1vw] rounded-t-[4vw]">
+                            <div className="items-content lg:py-[4vw] py-[8vw] all-center relative">
+                                <img src={images} alt={title} className='lg:w-[18vw] w-[80vw] lg:h-[12vw] h-[50vw] object-cover' />
+                            </div>
+                            <div className="fl-woo-item-bottom-content mt-[1vw] relative">
+                                <div className="fl--woo-add-to-cart-wrap all-center pt-[1.5vw] mb-[20px]">
+                                    <p className='font-topic'>{t(title)}</p>
+                                    <div ref={orderRef} className="fl--order">
+                                        {!showLocations ? (
+                                            <div
+                                                className="order-now bg-black lg:!rounded-b-[1vw] !rounded-b-[4vw]"
+                                                onClick={() => setShowLocations(true)}
+                                            >
+                                                <p className='text-white font-topic'>{t('category.book')}</p>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <Link to={'tel:0848.770.770'} className="order-now bg-black lg:!rounded-bl-[1vw]" target='_blank'>
+                                                    <p className='text-white font-topic2 scale-icon'>{t('category.bookDN')}</p>
+                                                </Link>
+                                                <Link to={'tel:0848.771.771'} className="order-now bg-black lg:!rounded-br-[1vw] border-items border-l-[0.1vw]" target='_blank'>
+                                                    <p className='text-white font-topic2 scale-icon'>{t('category.bookNT')}</p>
+                                                </Link>
+                                            </>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </CSSTransition>
+            );
+        });
+    }, [t, showLocations]);
 
     return (
         <div className='bg-category w-full category'>

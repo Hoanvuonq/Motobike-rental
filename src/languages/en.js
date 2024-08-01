@@ -112,8 +112,9 @@ const en = {
             location: "110 Tran Van Du, My An, Ngu Hanh Son, Da Nang City",
             phone: "0848 770 770",
             mail: "tbikedn@gmail.com",
-            website: "www.tbikedanang.com",
-            about: "INTRODUCTION TO T - BIKE"
+            website: "www.tbikevietnam.com",
+            about: "INTRODUCTION TO T - BIKE",
+            phone: "Phone Number"
         },
     }
 };

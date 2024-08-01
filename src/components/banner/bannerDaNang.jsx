@@ -1,7 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Button from '../button';
+import { Link } from 'react-router-dom';
 
-const BannerDaNang = ({ location }) => {
+const BannerDaNang = () => {
     const { t } = useTranslation();
 
     return (
@@ -12,6 +14,9 @@ const BannerDaNang = ({ location }) => {
                     <h1 className='font-title text-white'>{t('banner.titleHeader')}</h1>
                     <p className='font-content text-white'>{t('banner.contentHeader')}</p>
                 </div>
+                <Link to={'tel:0848770770'}>
+                    <Button title={t('category.book')} className="hover-items" />
+                </Link>
             </div>
             <div className="bg-overlay" />
         </div>

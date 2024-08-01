@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../../assets/logo/t-bike_logo.png';
+import Logo from '../../assets/logo/logo-tbike-new.jpg';
 import IconMenu from '../../assets/img/icon-menu.png';
 import Menu from '../../components/menu';
 import iconPhone from '../../assets/icon/phone-rings.svg';
@@ -66,7 +66,7 @@ const Header = () => {
                 } top-0 z-50 border-b-[0.01vw] border-header flex items-center justify-between transition-all lg:px-[6vw] px-[1vw] duration-300`}
         >
             <Link to={'/'}>
-                <img src={Logo} alt="Logo" className="lg:w-[5vw] lg:h-[5vw] w-[20vw] h-[20vw]" />
+                <img src={Logo} alt="Logo" className="lg:w-[5vw] lg:h-[5vw] w-[20vw] h-[20vw] rounded-full" />
             </Link>
             <div className="flex items-center gap-[2vw]">
                 <div className="gap-[1.5vw] lg:flex hidden">

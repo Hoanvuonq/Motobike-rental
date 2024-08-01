@@ -15,7 +15,7 @@ import IconTrust6 from '../../assets/img/icon-trust-6.png';
 const listTrust = [
     { images: IconTrust1, title: "benefit.title1", content: "benefit.content1" },
     { images: IconTrust2, title: "benefit.title2", content: "benefit.content2" },
-    { images: IconTrust3, title: "benefit.title3", content: "benefit.content3" },
+    // { images: IconTrust3, title: "benefit.title3", content: "benefit.content3" },
     { images: IconTrust4, title: "benefit.title4", content: "benefit.content4" },
     { images: IconTrust5, title: "benefit.title5", content: "benefit.content5" },
     { images: IconTrust6, title: "benefit.title6", content: "benefit.content6" },
