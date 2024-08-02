@@ -27,6 +27,7 @@ const Footer = () => {
     const listContact = [
         { title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
         { title: 'footer.location2', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
+        { title: 'footer.location3', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
         { title: locationIndex, img: Phone, link: `tel:${locationIndex}` },
         { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
         { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
@@ -68,9 +69,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-layout w-full all-start flex-col !justify-between lg:pt-[3vw] pt-[3vw] gap-[2vw] '>
-                <div className="flex items-center justify-between lg:gap-[5vw] gap-[16vw] w-full px-[6vw] lg:flex-row flex-col pb-[2vw]">
-                    <div className="flex justify-start items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
+            <div className='bg-layout w-full all-start flex-col !justify-between lg:pt-[5vw] pt-[5vw] gap-[2vw] '>
+                <div className="flex items-start justify-center h-auto lg:gap-[5vw] gap-[16vw] w-full px-[6vw] lg:flex-row flex-col pb-[2vw]">
+                    <div className="flex justify-center items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
                         <div className="flex flex-col lg:gap-[2vw] gap-[4vw]">
                             <div className="flex items-center lg:justify-between justify-center">
                                 <Link to={'/'}>
@@ -89,7 +90,7 @@ const Footer = () => {
 
                         </div>
                     </div>
-                    <div className="flex justify-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
+                    <div className="flex justify-center items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
                         <div className="flex flex-col lg:gap-[2vw] gap-[4vw]">
                             <h1 className='font-title'>{t('footer.contact')}</h1>
                             <div className="flex flex-col lg:gap-[1vw] gap-[5vw] bg-contact">
@@ -97,7 +98,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw] ">
+                    <div className="flex justify-center items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw] ">
                         <div className="flex flex-col lg:gap-[2vw] gap-[4vw]">
                             <h1 className='font-title'>{t('footer.about')}</h1>
                             <div className="flex flex-col lg:gap-[1vw] gap-[5vw] bg-contact">

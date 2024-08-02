@@ -11,7 +11,7 @@ const BannerDaNang = () => {
             <div className="banner w-full all-center flex-col lg:gap-[4vw] gap-[8vw] absolute z-10 px-[1vw]">
                 <div className="all-center flex-col xl:gap-[1vw] gap-[3vw]">
                     <p className='text-mainColor font-slogan'>{t('banner.sloganHeader')}</p>
-                    <h1 className='font-title text-white'>{t('banner.titleHeader')}</h1>
+                    <h1 className='font-title text-white'>{t('banner.titleDN')}</h1>
                     <p className='font-content text-white'>{t('banner.contentHeader')}</p>
                 </div>
                 <Link to={'tel:0848770770'}>
