@@ -1,22 +1,22 @@
-import React, { useMemo } from 'react'
-import Logo from '../../assets/logo/logo-tbike-new.jpg'
-import Location from '../../assets/icon/location.svg'
-import Phone from '../../assets/icon/phone.svg'
-import Email from '../../assets/icon/email.svg'
-import Website from '../../assets/icon/website.svg'
-import Dots from '../../assets/icon/dot.svg'
-import BannerContent from '../../assets/img/banner-content-f.jpg'
-import { Link, useLocation } from 'react-router-dom'
-import Button from '../../components/button'
+import React, { useMemo } from 'react';
+import Logo from '../../assets/logo/logo-tbike-new.jpg';
+import Location from '../../assets/icon/location.svg';
+import Phone from '../../assets/icon/phone.svg';
+import Email from '../../assets/icon/email.svg';
+import Website from '../../assets/icon/website.svg';
+import Dots from '../../assets/icon/dot.svg';
+import BannerContent from '../../assets/img/banner-content-f.jpg';
+import { Link, useLocation } from 'react-router-dom';
+import Button from '../../components/button';
 import { useTranslation } from 'react-i18next';
-import Facebook from '../../assets/icon/icon-facebook.png'
+import Facebook from '../../assets/icon/icon-facebook.png';
 
 const listAbout = [
     { title: 'navbar.home', link: '/' },
     { title: 'navbar.rentalDanang', link: '/rental-danang' },
     { title: 'navbar.rentalNhatrang', link: '/rental-nhatrang' },
     { title: 'navbar.contact', link: '#' }
-]
+];
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -25,35 +25,39 @@ const Footer = () => {
     const locationIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
 
     const listContact = [
-        { title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
+        { id: "Cơ Sở Đà Nẵng", title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
         { title: 'footer.location2', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
-        { title: 'footer.location3', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
-        { title: locationIndex, img: Phone, link: `tel:${locationIndex}` },
+        { title: 'Hotline: 0848 770 770', img: Phone, link: `tel:0848770770` },
+        { id: "Cơ Sở Nha Trang", title: 'footer.location3', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
+        { title: 'Hotline: 0848 771 771', img: Phone, link: `tel:0848771771` },
         { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
         { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
     ];
 
     const infoContact = useMemo(() => {
-        return listContact.map(({ title, img, link }, index) => (
-            <span key={index} >
-                <Link to={link} className="flex items-center lg:gap-[0.5vw] gap-[1vw] hover-items">
-                    <img src={img} alt={img} className='icon-svg lg:w-[0.9vw] w-[5vw]' />
-                    <p className='font-content hover-line'>{t(title)}</p>
-                </Link>
+        return listContact.map(({ title, img, link, id }, index) => (
+            <span key={index}>
+                <div>
+                    {id && <p className='font-content1 uppercase pb-[1vw]'>{id}</p>}
+                    <Link to={link} className="flex items-center lg:gap-[0.5vw] gap-[1vw] hover-items">
+                        <img src={img} alt={img} className='icon-svg lg:w-[0.9vw] w-[5vw]' />
+                        <p className='font-content hover-line'>{t(title)}</p>
+                    </Link>
+                </div>
             </span>
-        ))
-    }, [listContact, t])
+        ));
+    }, [listContact, t]);
 
     const infoAbout = useMemo(() => {
         return listAbout.map(({ title, link }, index) => (
-            <span key={index} >
+            <span key={index}>
                 <Link to={link} className="flex items-center lg:gap-[0.5vw] gap-[1vw] hover-items" target='_blank'>
                     <img src={Dots} alt='Dots' className='icon-svg lg:w-[0.9vw] w-[5vw]' />
                     <p className='font-content hover-line'>{t(title)}</p>
                 </Link>
             </span>
-        ))
-    }, [listAbout, t])
+        ));
+    }, [listAbout, t]);
 
     return (
         <div className='w-full footer'>
@@ -82,12 +86,6 @@ const Footer = () => {
                             <Link className="border-items border-[0.1vw] rounded-[1vw] w-[90vw] h-[40vw] banner-content relative animateShine scale-icon lg:hidden block ">
                                 <div className="bg-overlayBanner !opacity-80 rounded-[1vw]" />
                             </Link>
-                            {/* <span >
-                                <Link to={'https://www.facebook.com/profile.php?id=100063470564198'} className="flex items-center lg:gap-[0.5vw] gap-[1vw] hover-items">
-                                    <img src={Facebook} alt='Facebook' className='lg:w-[1.5vw] w-[5vw]' />
-                                </Link>
-                            </span> */}
-
                         </div>
                     </div>
                     <div className="flex justify-center items-start flex-col gap-[2vw] lg:w-[25vw] w-[90vw]">
@@ -111,8 +109,8 @@ const Footer = () => {
                     <h1 className='text-[#a9aeb3] font-coppyRight'>Coder © 2024 Infinity Software</h1>
                 </div>
             </div >
-        </div>
-    )
-}
+        </div >
+    );
+};
 
-export default Footer
+export default Footer;

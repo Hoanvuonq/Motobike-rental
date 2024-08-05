@@ -17,6 +17,7 @@ const BannerDaNang = () => {
                 <Link to={'tel:0848770770'}>
                     <Button title={t('category.book')} className="hover-items" />
                 </Link>
+                <p className='font-content text-white'>{t('banner.delivery')}</p>
             </div>
             <div className="bg-overlay" />
         </div>

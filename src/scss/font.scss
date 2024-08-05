@@ -96,6 +96,17 @@
             line-height: 7vw;
         }
     }
+    .font-content1 {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1vw;
+        line-height: 1.5vw;
+        font-weight: 400;
+        color: #fff;
+        @media (max-width: 768px) {
+            font-size: 4.5vw;
+            line-height: 7vw;
+        }
+    }
 
     .font-coppyRight {
         font-family: monospace;
