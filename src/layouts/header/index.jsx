@@ -63,10 +63,10 @@ const Header = () => {
     return (
         <div
             className={`header w-full  ${isScrolled ? 'bg-overLay fixed' : 'bg-transparent absolute'
-                } top-0 z-50 border-b-[0.01vw] border-header flex items-center justify-between transition-all lg:px-[6vw] px-[1vw] duration-300`}
+                } top-0 z-50 border-b-[0.01vw] border-header flex items-center justify-between transition-all lg:px-[6vw] px-[4vw] lg:py-0 py-[3vw] duration-300`}
         >
             <Link to={'/'}>
-                <img src={Logo} alt="Logo" className="lg:w-[5vw] lg:h-[5vw] w-[20vw] h-[20vw] rounded-full" />
+                <img src={Logo} alt="Logo" className="lg:w-[5vw] lg:h-[5vw] w-[14vw] h-[14vw] rounded-full" />
             </Link>
             <div className="flex items-center gap-[2vw]">
                 <div className="gap-[1.5vw] lg:flex hidden">

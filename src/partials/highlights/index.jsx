@@ -30,8 +30,8 @@ const Highlights = () => {
     }, [listIMG, t])
     return (
         <div className='bg-highlights highlights all-center w-full lg:h-[40vw] h-full'>
-            <div className="bg-overlay !opacity-80" />
-            <div className="all-center lg:!flex-row !flex-col lg:gap-[3vw] gap-[8vw] w-full">
+            <div className="overlay !opacity-80" />
+            <div className="all-center lg:!flex-row !flex-col lg:gap-[3vw] gap-[8vw] w-full relative z-40">
                 <div className="flex flex-col lg:gap-[1vw] gap-[3vw] lg:w-[30vw] w-[90vw] h-full">
                     <div data-aos="fade-right" data-aos-delay="0" className="font-slogan text-mainColor">{t('hightlight.slogan')}</div>
                     <div data-aos="fade-right" data-aos-delay="500" className="font-title text-white uppercase">{t('hightlight.titleL')}</div>

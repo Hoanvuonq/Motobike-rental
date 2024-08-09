@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom'
 const Social = () => {
     const location = useLocation();
     const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
-    const locationIndex = city === 'nhatrang' ? '0848 771 771' : '0848 770 770';
+    const locationIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
 
     const listSocial = [
         { images: Zalo, color: "bg-zalo", style: 'fillColorZalo', link: `https://zalo.me/${locationIndex}` },
