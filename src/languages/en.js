@@ -14,6 +14,7 @@ const en = {
             titleDN: "DA NANG AREA",
             titleNT: "NHA TRANG AREA",
             contentHeader: "Find your ideal motorbike at T-Bike Vietnam",
+            search: "You are traveling in ",
             delivery: "24/7 DELIVERY",
             locationDaNang: "Da Nang",
             locationNhaTrang: "Nha Trang",

@@ -14,6 +14,7 @@ const vi = {
             titleDN: "KHU VỰC ĐÀ NẴNG",
             titleNT: "KHU VỰC NHA TRANG",
             contentHeader: "Tìm chiếc xe máy lý tưởng của bạn tại T-Bike Việt Nam",
+            search: "Bạn đang đi du lịch ở",
             delivery: "GIAO XE TẬN NƠI 24/7",
             locationDaNang: "Đà Nẵng",
             locationNhaTrang: "Nha Trang",
