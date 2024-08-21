@@ -69,7 +69,9 @@ const Footer = () => {
                     </div>
                     <div className="flex items-center lg:gap-[0.5vw] gap-[1vw]">
                         <input type="phone" placeholder={t('footer.phone')} className='bg-white focus:outline-none lg:indent-[0.5vw] indent-[3vw] lg:py-[0.8vw] py-[2.5vw] rounded-[0.5vw] lg:w-[30vw] w-[60vw]' required />
-                        <Button title={t('rentalDaNang.booking')} />
+                        <Link to={'https://docs.google.com/forms/d/e/1FAIpQLSeVBq73GU3j7f-U6_fi8i6R5bN14QRaaNMIczWZXpJRbHGrjA/viewform'} target='_blank'>
+                            <Button title={t('rentalDaNang.booking')} />
+                        </Link>
                     </div>
                 </div>
             </div>
