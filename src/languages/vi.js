@@ -109,7 +109,7 @@ const vi = {
             message: "Tin nhắn",
         },
         footer: {
-            lastestNews: "TIN TỨC MỚI NHẤT",
+            lastestNews: "ĐỂ LẠI THÔNG TIN",
             subscribe: "ĐĂNG KÝ ĐỂ CẬP NHẬT",
             content: "T-BIKE Chúng tôi cam kết mang đến dịch vụ cho thuê xe máy và ô tô chất lượng, an toàn tuyệt đối. Xe được bảo trì định kỳ, đảm bảo hoạt động tốt nhất. Hãy để T-BIKE đồng hành cùng bạn trên mọi hành trình!",
             contact: "LIÊN HỆ",

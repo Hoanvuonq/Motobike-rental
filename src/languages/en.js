@@ -111,7 +111,7 @@ const en = {
             message: "Message",
         },
         footer: {
-            lastestNews: "LATEST NEWS",
+            lastestNews: "LEAVE INFORMATION",
             subscribe: "SIGN UP FOR UPDATES",
             content: "T-BIKE We are committed to providing quality, absolutely safe motorbike and car rental services. Vehicles are regularly maintained to ensure the best performance. Let T-BIKE accompany you on every journey!",
             contact: "CONTACT",
