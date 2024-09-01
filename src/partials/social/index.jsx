@@ -1,12 +1,10 @@
-// src/components/Social/Social.jsx
-
 import React, { useMemo } from 'react';
 import Zalo from '../../assets/icon/zalo-social.png';
 import Phone from '../../assets/icon/phone-social.png';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { incrementZaloClick, incrementPhoneClick, getClickData } from '../../utils/dataClick';
-import axios from 'axios';
+import { incrementZaloClick, incrementPhoneClick, addClickHistory } from '../../redux/actions/clickActions';
+import getLocationInfo from '../../api/location';
 
 const Social = () => {
     const location = useLocation();
@@ -14,45 +12,31 @@ const Social = () => {
     const locationIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
     const dispatch = useDispatch();
 
-    const getLocationInfo = async () => {
-        try {
-            const response = await axios.get('https://ipinfo.io/json?token=6afad0bc31935b');
-            return response.data;
-        } catch (error) {
-            console.error("Error fetching location info:", error);
-            return null;
-        }
-    };
-
     const handleClick = async (type) => {
-        // Sử dụng Geolocation API để lấy tọa độ hiện tại
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(async (position) => {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
+        try {
+            const locationData = await getLocationInfo();
+            const actionPayload = {
+                type,
+                timestamp: new Date().toLocaleString(),
+                location: locationData ? `${locationData.city}, ${locationData.region}, ${locationData.country}` : 'Unknown',
+            };
 
-                // Lấy thông tin địa lý từ IP
-                const locationData = await getLocationInfo();
-                const location = locationData ? `${locationData.city}, ${locationData.region}, ${locationData.country}` : 'Unknown';
+            if (type === 'Zalo') {
+                dispatch(incrementZaloClick());
+            } else {
+                dispatch(incrementPhoneClick());
+            }
 
-                const actionPayload = {
-                    type,
-                    timestamp: new Date().toLocaleString(),
-                    location: location || `Latitude: ${latitude}, Longitude: ${longitude}`
-                };
+            dispatch(addClickHistory(actionPayload));
 
-                if (type === 'Zalo') {
-                    incrementZaloClick(actionPayload);
-                } else {
-                    incrementPhoneClick(actionPayload);
-                }
+            // Lưu vào localStorage
+            const clickHistory = JSON.parse(localStorage.getItem('clickHistory')) || [];
+            clickHistory.push(actionPayload);
+            localStorage.setItem('clickHistory', JSON.stringify(clickHistory));
 
-                console.log("Current Click Data:", getClickData());
-            }, (error) => {
-                console.error('Error getting location:', error);
-            });
-        } else {
-            console.error('Geolocation is not supported by this browser.');
+            console.log("Current Click Data:", clickHistory);
+        } catch (error) {
+            console.error("Error handling click:", error);
         }
     };
 
