@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.60c8b0d1.css",
-    "main.js": "/static/js/main.ae56a610.js",
+    "main.js": "/static/js/main.50a935f3.js",
     "static/media/banner-danang.png": "/static/media/banner-danang.1e1abdaf91721662da68.png",
     "static/media/banner-moto-1.jpg": "/static/media/banner-moto-1.3aad307b497256745a9d.jpg",
     "static/media/moto16.png": "/static/media/moto16.6189efffd6cb03137863.png",
@@ -56,10 +56,10 @@
     "static/media/location.svg": "/static/media/location.524400a2b978af2fe042c9ecc8cc01d3.svg",
     "index.html": "/index.html",
     "main.60c8b0d1.css.map": "/static/css/main.60c8b0d1.css.map",
-    "main.ae56a610.js.map": "/static/js/main.ae56a610.js.map"
+    "main.50a935f3.js.map": "/static/js/main.50a935f3.js.map"
   },
   "entrypoints": [
     "static/css/main.60c8b0d1.css",
-    "static/js/main.ae56a610.js"
+    "static/js/main.50a935f3.js"
   ]
 }
