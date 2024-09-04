@@ -19,7 +19,7 @@ const Highlights = () => {
         Aos.init({ duration: 2000 })
     }, [])
     const listImagMemo = useMemo(() => {
-        return listIMG.map(({ images, title, content, }, index) => (
+        return listIMG.map(({ images, title }, index) => (
             <div key={index} data-aos="fade-left" className="flex items-center lg:gap-[1vw] gap-[4vw]">
                 <img src={images} alt="icon hightlight" className='lg:w-[4vw] w-[15vw]' />
                 <div className="flex items-center lg:gap-[1vw] gap-[3vw]">
@@ -29,8 +29,7 @@ const Highlights = () => {
         ))
     }, [listIMG, t])
     return (
-        <div className='bg-highlights highlights all-center w-full lg:h-[40vw] h-full'>
-            <div className="overlay !opacity-80" />
+        <div className='bg-highlights highlights all-center w-full lg:h-[40vw] h-full z-40 relative'>
             <div className="all-center lg:!flex-row !flex-col lg:gap-[3vw] gap-[8vw] w-full relative z-40">
                 <div className="flex flex-col lg:gap-[1vw] gap-[3vw] lg:w-[30vw] w-[90vw] h-full">
                     <div data-aos="fade-right" data-aos-delay="0" className="font-slogan text-mainColor">{t('hightlight.slogan')}</div>
@@ -41,7 +40,7 @@ const Highlights = () => {
                 </div>
                 <div className="flex flex-col lg:gap-[2vw] gap-[8vw] lg:w-[38vw] w-[90vw] overflow-hidden">
                     <div data-aos="fade-left" data-aos-delay="0" className="flex items-start lg:gap-[2vw] gap-[6vw]">
-                        <img src={Quotation} alt="Quotation" className='lg:w-[5vw] w-[20vw] opacity-40' />
+                        <img src={Quotation} alt="Quotation" className='lg:w-[5vw] w-[20vw] opacity-' />
                         <div className="flex flex-col lg:gap-[0.5vw] gap-[5vw] lg:border-l-[0.4vw] border-l-[1vw] border-mainColor lg:pl-[1vw] pl-[3vw]">
                             <p className='font-content text-white'>{t('hightlight.text1')}</p>
                             <p className='font-content text-white'>{t('hightlight.text2')}</p>
@@ -53,6 +52,7 @@ const Highlights = () => {
                     </div>
                 </div>
             </div>
+            <div className="bg-overlay !opacity-30" />
         </div>
     )
 }
