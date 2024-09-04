@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { incrementZaloClick, incrementPhoneClick, addClickHistory } from '../../redux/actions/clickActions';
 import getLocationInfo from '../../api/location';
+import axios from 'axios';
 
 const Social = () => {
     const location = useLocation();
@@ -29,16 +30,57 @@ const Social = () => {
 
             dispatch(addClickHistory(actionPayload));
 
-            // Lưu vào localStorage
-            const clickHistory = JSON.parse(localStorage.getItem('clickHistory')) || [];
-            clickHistory.push(actionPayload);
-            localStorage.setItem('clickHistory', JSON.stringify(clickHistory));
+            // Gửi dữ liệu đến Google Form
+            await sendToGoogleForm(actionPayload);
 
-            console.log("Current Click Data:", clickHistory);
+            console.log("User clicked:", actionPayload);
+
         } catch (error) {
             console.error("Error handling click:", error);
         }
     };
+
+
+    const sendToGoogleForm = (data) => {
+        const form = document.createElement('form');
+        form.action = "https://docs.google.com/forms/d/e/1FAIpQLSfG7bg18htT799cqA8DxC75Gn3q-r49uiVTh0LBo5ypX9ydHA/formResponse";
+        form.method = "POST";
+        form.target = "hidden_iframe";
+
+        form.style.display = "none";
+
+        const typeField = document.createElement('input');
+        typeField.type = "hidden";
+        typeField.name = "entry.1329239312";
+        typeField.value = data.type;
+        form.appendChild(typeField);
+
+        const timestampField = document.createElement('input');
+        timestampField.type = "hidden";
+        timestampField.name = "entry.184853561";
+        timestampField.value = data.timestamp;
+        form.appendChild(timestampField);
+
+        const locationField = document.createElement('input');
+        locationField.type = "hidden";
+        locationField.name = "entry.901133057";
+        locationField.value = data.location;
+        form.appendChild(locationField);
+
+        document.body.appendChild(form);
+
+        const iframe = document.createElement('iframe');
+        iframe.name = "hidden_iframe";
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+
+        // Submit form
+        form.submit();
+
+        console.log("Data sent to Google Form successfully.");
+    };
+
+
 
     const listSocial = [
         {

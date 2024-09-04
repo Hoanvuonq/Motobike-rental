@@ -1,37 +1,33 @@
 import { INCREMENT_ZALO_CLICK, INCREMENT_PHONE_CLICK, ADD_CLICK_HISTORY } from '../actions/clickActions';
+import clickData from '../../data/data';
 
 const initialState = {
-  zaloClicks: JSON.parse(localStorage.getItem('zaloClicks')) || 0,
-  phoneClicks: JSON.parse(localStorage.getItem('phoneClicks')) || 0,
-  clickHistory: JSON.parse(localStorage.getItem('clickHistory')) || [],
+  zaloClicks: clickData.filter(item => item.type === 'Zalo').length,
+  phoneClicks: clickData.filter(item => item.type === 'Phone').length,
+  clickHistory: clickData,
 };
 
 const clickReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_ZALO_CLICK:
-      const newZaloClicks = state.zaloClicks + 1;
-      localStorage.setItem('zaloClicks', JSON.stringify(newZaloClicks));
       return {
         ...state,
-        zaloClicks: newZaloClicks,
+        zaloClicks: state.zaloClicks + 1,
       };
     case INCREMENT_PHONE_CLICK:
-      const newPhoneClicks = state.phoneClicks + 1;
-      localStorage.setItem('phoneClicks', JSON.stringify(newPhoneClicks));
       return {
         ...state,
-        phoneClicks: newPhoneClicks,
+        phoneClicks: state.phoneClicks + 1,
       };
     case ADD_CLICK_HISTORY:
-      const newClickHistory = [...state.clickHistory, action.payload];
-      localStorage.setItem('clickHistory', JSON.stringify(newClickHistory));
       return {
         ...state,
-        clickHistory: newClickHistory,
+        clickHistory: [...state.clickHistory, action.payload],
       };
     default:
       return state;
   }
 };
+
 
 export default clickReducer;
