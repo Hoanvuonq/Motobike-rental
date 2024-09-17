@@ -1,16 +1,17 @@
 import React, { useMemo } from 'react';
 import Zalo from '../../assets/icon/zalo-social.png';
 import Phone from '../../assets/icon/phone-social.png';
+import Facebook from '../../assets/icon/facebook-app.png';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { incrementZaloClick, incrementPhoneClick, addClickHistory } from '../../redux/actions/clickActions';
 import getLocationInfo from '../../api/location';
-import axios from 'axios';
 
 const Social = () => {
     const location = useLocation();
     const city = location.pathname.includes('nhatrang') ? 'nhatrang' : 'danang';
     const locationIndex = city === 'nhatrang' ? '0848771771' : '0848770770';
+    const linkFaceook = city === 'nhatrang' ? 'https://www.facebook.com/profile.php?id=100094403166212' : 'https://www.facebook.com/profile.php?id=100063470564198';
     const dispatch = useDispatch();
 
     const handleClick = async (type) => {
@@ -30,7 +31,6 @@ const Social = () => {
 
             dispatch(addClickHistory(actionPayload));
 
-            // Gửi dữ liệu đến Google Form
             await sendToGoogleForm(actionPayload);
 
             console.log("User clicked:", actionPayload);
@@ -97,6 +97,12 @@ const Social = () => {
             link: `tel:${locationIndex}`,
             onClick: () => handleClick('Phone'),
         },
+        {
+            images: Facebook,
+            color: 'bg-facebook',
+            style: 'fillColorFacebook',
+            link: `${linkFaceook}`,
+        },
     ];
 
     const socialMemo = useMemo(() => {
@@ -116,7 +122,7 @@ const Social = () => {
         ));
     }, [listSocial]);
 
-    return <div className="all-center flex-col lg:gap-[2vw] gap-[8vw] text-white">{socialMemo}</div>;
+    return <div className="all-center flex-col lg:gap-[1.5vw] gap-[6vw] text-white">{socialMemo}</div>;
 };
 
 export default Social;

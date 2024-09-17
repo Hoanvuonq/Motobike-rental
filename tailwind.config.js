@@ -12,6 +12,7 @@ module.exports = withMT({
         zalo: "#2196F3",
         about: "#f8f8f8",
         phone: "#6fd626",
+        facebook: "#1877f2",
         layout: "#343434",
         itemsCheckbox: "rgba(0, 0, 0, 0.03)",
         colorContact: "#EEEEEE"

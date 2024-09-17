@@ -124,6 +124,9 @@ const en = {
             about: "INTRODUCTION TO T - BIKE",
             phone: "Phone Number"
         },
+        slider: {
+            title: "REAL PICTURES",
+        }
     }
 };
 

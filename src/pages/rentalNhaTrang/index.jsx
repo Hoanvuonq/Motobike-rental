@@ -3,6 +3,8 @@ import Carousel from '../../components/carousel';
 import Banner from '../../components/banner/bannerNhaTrang';
 import AsideCategory from '../../partials/card/asideCategory';
 import ContentCard from '../../partials/card/contentCard';
+import SliderComponent from '../../components/slider';
+import { Data } from '../../components/slider/data';
 
 const RentalNhaTrang = () => {
     const [filter, setFilter] = useState(['scooters']);
@@ -20,6 +22,7 @@ const RentalNhaTrang = () => {
     return (
         <div className='all-center w-full flex-col'>
             <Banner />
+            <SliderComponent images={Data.nhatrang} />
             <div className="flex justify-between w-full px-[4vw] py-[4vw] gap-[6vw] lg:flex-row flex-col">
                 <AsideCategory onFilterChange={handleFilterChange} selectedFilters={filter} />
                 <ContentCard filter={filter} />

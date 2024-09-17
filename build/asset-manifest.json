@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.60c8b0d1.css",
-    "main.js": "/static/js/main.50a935f3.js",
+    "main.css": "/static/css/main.12da2aa7.css",
+    "main.js": "/static/js/main.0a0403f0.js",
     "static/media/banner-danang.png": "/static/media/banner-danang.1e1abdaf91721662da68.png",
     "static/media/banner-moto-1.jpg": "/static/media/banner-moto-1.3aad307b497256745a9d.jpg",
     "static/media/moto16.png": "/static/media/moto16.6189efffd6cb03137863.png",
@@ -50,16 +50,16 @@
     "static/media/key.svg": "/static/media/key.3cdda40dfb365834e7fdef21fde1d1a4.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/email.svg": "/static/media/email.d632323bb6ca5dbc8ae54772d02aaeab.svg",
+    "index.html": "/index.html",
     "static/media/phone.svg": "/static/media/phone.4019b04c57b1266aa9496a337bc97def.svg",
     "static/media/dot.svg": "/static/media/dot.65a4838a9bddd387312aca60d93cc4d1.svg",
     "static/media/location-card.svg": "/static/media/location-card.aa4803d341688254219669b6b0d64050.svg",
     "static/media/location.svg": "/static/media/location.524400a2b978af2fe042c9ecc8cc01d3.svg",
-    "index.html": "/index.html",
-    "main.60c8b0d1.css.map": "/static/css/main.60c8b0d1.css.map",
-    "main.50a935f3.js.map": "/static/js/main.50a935f3.js.map"
+    "main.12da2aa7.css.map": "/static/css/main.12da2aa7.css.map",
+    "main.0a0403f0.js.map": "/static/js/main.0a0403f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.60c8b0d1.css",
-    "static/js/main.50a935f3.js"
+    "static/css/main.12da2aa7.css",
+    "static/js/main.0a0403f0.js"
   ]
 }

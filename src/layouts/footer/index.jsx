@@ -1,15 +1,14 @@
 import React, { useMemo } from 'react';
-import Logo from '../../assets/logo/logo-tbike-new.jpg';
+import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+import Dots from '../../assets/icon/dot.svg';
+import Email from '../../assets/icon/email.svg';
 import Location from '../../assets/icon/location.svg';
 import Phone from '../../assets/icon/phone.svg';
-import Email from '../../assets/icon/email.svg';
 import Website from '../../assets/icon/website.svg';
-import Dots from '../../assets/icon/dot.svg';
-import BannerContent from '../../assets/img/banner-content-f.jpg';
-import { Link, useLocation } from 'react-router-dom';
+import Facebook from '../../assets/img/facebook.png';
+import Logo from '../../assets/logo/logo-tbike-new.jpg';
 import Button from '../../components/button';
-import { useTranslation } from 'react-i18next';
-import Facebook from '../../assets/icon/icon-facebook.png';
 
 const listAbout = [
     { title: 'navbar.home', link: '/' },
@@ -28,10 +27,13 @@ const Footer = () => {
         { id: "Cơ Sở Đà Nẵng", title: 'footer.location', img: Location, link: "https://www.google.com/maps/search/?api=1&query=110+Trần+Văn+Dư,+Mỹ+An,+Ngũ+Hành+Sơn,+Đà+Nẵng" },
         { title: 'footer.location2', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
         { title: 'Hotline: 0848 770 770', img: Phone, link: `tel:0848770770` },
+        { title: 'T-Bike DaNang - Dịch Vụ Cho Thuê Xe Máy, ÔTô ', img: Facebook, link: `https://www.facebook.com/profile.php?id=100063470564198` },
         { id: "Cơ Sở Nha Trang", title: 'footer.location3', img: Location, link: "https://maps.app.goo.gl/YHd1XoYeWoKNWcZF9" },
         { title: 'Hotline: 0848 771 771', img: Phone, link: `tel:0848771771` },
         { title: 'footer.mail', img: Email, link: "mailto:tbikedn@gmail.com" },
         { title: 'footer.website', img: Website, link: "https://www.tbikedanang.com/" },
+        { title: 'T-Bike NhaTrang - Dịch Vụ Cho Thuê Xe Máy Tự Lái', img: Facebook, link: `https://www.facebook.com/profile.php?id=100094403166212` },
+
     ];
 
     const infoContact = useMemo(() => {

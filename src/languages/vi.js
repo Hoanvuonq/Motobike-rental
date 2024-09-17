@@ -122,6 +122,9 @@ const vi = {
             about: "GIỚI THIỆU VỀ T - BIKE",
             phone: "Số Điện Thoại"
         },
+        slider: {
+            title: "HÌNH ẢNH THỰC TẾ",
+        }
     }
 };
 
